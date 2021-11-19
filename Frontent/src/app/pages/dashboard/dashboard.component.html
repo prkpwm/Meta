@@ -1,0 +1,351 @@
+<div class="container-fluid" style="margin-top: 6em;">
+  <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
+    class="modal fade d-block" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center pt-4">
+
+          <div *ngIf="modalStep == 1" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/welco-00080721_normal.png" width="125">
+            <h5 class="text-white mt-3">Welcome back!!! <span class="text-white"></span></h5>
+            <h6 class="text-white">Have you seen our lastest blog post? <span class="text-blue">Click!</span>
+            </h6>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">ORDER</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+
+            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2"><i class="mdi mdi-trending-up"></i>
+            </span>
+            <h2 class="font-weight-normal"> {{totalCases | number}} </h2>
+            <p class="text-muted">{{todayCases}} {{ 'Shared.TopCards.6' | translate }}</p>
+          </div>
+          <div class="progress progress-bar-alt-blue progress-sm m-0">
+            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">REVENUE</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalDeaths | number}} </h2>
+            <p class="text-muted">{{todayDeaths}} {{ 'Shared.TopCards.6' | translate }}</p>
+          </div>
+          <div class="progress progress-bar-alt-danger progress-sm m-0">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">PROFIT</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalRecoveries | number}} </h2>
+            <p class="text-muted">{{activeCases | number}} today</p>
+          </div>
+          <div class="progress progress-bar-alt-success progress-sm m-0">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">MEMBERS</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(totalCritical / activeCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalCritical | number}} </h2>
+            <p class="text-muted">{{casesPer1M | number}} today</p>
+          </div>
+          <div class="progress progress-bar-alt-warning progress-sm m-0">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+  </div>
+
+
+  <div class="row">
+
+
+    <div class="col-xl-8">
+      <div class="card-box">
+        <div class="float-md-right float-right d-md-inline d-none">
+          <button type="button" class="btn btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('cases');"> Order</button>
+          <button type="button" class="btn btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('deaths')">Revenue</button>
+          <button type="button" class="btn btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('recovered')">Profit</button>
+          <button type="button" class="btn btn-xs btn-lighten-warning waves-effect waves-light width-xs"
+            (click)="loadMap('critical')">Member</button>
+        </div>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">Worldwide</h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoadingMap">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="table-responsive" [class.d-none]="isLoadingMap">
+          <div id="worldChart" style="width: 100%; height: 400px; overflow: hidden"></div>
+        </div>
+        <div class="d-md-none d-inline">
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('cases');">{{ 'Shared.TopCards.1' | translate }}</button>
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('deaths')">{{ 'Shared.TopCards.3' | translate }}</button>
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('recovered')">{{ 'Shared.TopCards.4' | translate }}</button>
+          <button type="button" class="btn btn-block btn-xs btn-lighten-warning waves-effect waves-light width-xs"
+            (click)="loadMap('critical')">{{ 'Shared.TopCards.5' | translate }}</button>
+        </div>
+      </div>
+    </div><!-- end col -->
+    <div class="col-xl-4">
+      <div class="card-box">
+        <div class="float-right">
+          <p>{{ 'Home.AffectedCountries.2' | translate }}</p>
+        </div>
+
+        <h4 class="header-title mb-3">Order nations</h4>
+        <div class="form-group row">
+          <div class="col-md-8 col-8">
+            <input type="text" id="example-placeholder" #search (keyup)="searchCountries(search.value)"
+              class="form-control" placeholder="{{ 'Home.AffectedCountries.3' | translate }} {{countries.length}} ">
+          </div>
+          <div class="col-md-4 col-4">
+            <select class="custom-select" #sortBy (change)="sortCountries(sortBy.value,search.value)">
+              <option selected="" disabled>{{ 'Home.AffectedCountries.4' | translate }}</option>
+              <option value="cases">{{ 'Home.AffectedCountries.5' | translate }}</option>
+              <option value="todayCases">{{ 'Home.AffectedCountries.6' | translate }}</option>
+              <option value="deaths">{{ 'Home.AffectedCountries.7' | translate }}</option>
+              <option value="todayDeaths">{{ 'Home.AffectedCountries.8' | translate }}</option>
+              <option value="recovered">{{ 'Home.AffectedCountries.9' | translate }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="fa-3x text-center" [class.d-none]="!isLoadingCountries">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="infectedCountries" [class.d-none]="isLoadingCountries">
+          <perfect-scrollbar #perfectscrollbar style="height:346px;">
+            <div class="infectedCountry" *ngFor="let country of countries">
+              <a [routerLink]="[ '/country', country.country.toLowerCase() ]">
+                <div class="infectedCountryFlag">
+                  <img *ngIf="countryCodes[country.country] else unknown" style="height: 30px;
+                width: 40px;" src="assets/flags/{{countryCodes[country.country].toLowerCase()}}.svg"
+                    alt="{{country.country}}">
+                  <ng-template #unknown>
+                    <img src="assets/flags/unknown.svg" alt="{{country.country}}">
+                  </ng-template>
+                </div>
+                <h5 class="infectedCountryName mt-0 mb-1">{{country.country}}</h5>
+                <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.cases | number}}
+                  Revenue</span> & <span class="text-success">{{country.deaths | number}} Profit</span></p>
+                <p class="infectedCountryCases text-blue">+{{country.todayCases | number}} Revenue</p>
+                <p class="infectedCountryDeaths text-danger">+{{country.todayDeaths | number}} Profit</p>
+              </a>
+            </div>
+          </perfect-scrollbar>
+
+
+        </div>
+      </div>
+    </div><!-- end col -->
+  </div>
+  <div class="row">
+    <div class="col-xl-4">
+      <div class="card-box">
+        <h4 class="header-title mb-3">{{ 'Shared.RateDistribution.1' | translate }} </h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="inbox-widget" [class.d-none]="isLoading">
+
+          <div id="radarChart" style="width: 100%; height: 400px"></div>
+
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-8">
+      <div class="card-box">
+        <div class="float-md-right float-right d-md-inline d-none">
+
+        </div>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">{{ 'Shared.InfectionsHistory.1' | translate }}</h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="table-responsive" [class.d-none]="isLoading">
+          <div id="lineChart" style="width: 100%; height: 400px; overflow: hidden"></div>
+        </div>
+      </div>
+    </div><!-- end col -->
+
+  </div>
+
+
+  <div class="row">
+    
+
+    <div class="col-xl-5">
+      <div class="card-box">
+
+        <h4 class="header-title mt-0 mb-3">Order</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-blue"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-success">
+                      {{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>Success</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-danger"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-danger">
+                      {{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>Cancel</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-warning"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-warning">
+                      {{(totalCritical / activeCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>On progress</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-info"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-info" *ngIf="fuse">
+                      {{fuse.list.length}}</h2>
+                    <h5>In-Basket</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-4">
+      <div class="card-box">
+        <h4 class="header-title mb-3">Order History</h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="inbox-widget" [class.d-none]="isLoading">
+          <div id="pieChart" style="width: 100%; height: 300px"></div>
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-3">
+      <div class="card-box text-center">
+        <h5>Time Now</h5>
+        <app-countup></app-countup>
+      </div>
+      <div class="card-box text-center">
+
+        <h5>Share</h5>
+       
+        <a class="btn btn-icon waves-effect btn-blue mr-1" target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://coronastatistics.live"> <i
+            class="fab fa-facebook"></i> </a>
+        <a class="btn btn-icon waves-effect btn-blue mr-1" target="_blank"
+          href="https://twitter.com/intent/tweet?url=https://coronastatistics.live&hashtags=Covid_19,CoronavirusPandemic,coronastatistics,corona&text=Stay%20Updated%20with%20Live%20Coronavirus%20Tracker">
+          <i class="fab fa-twitter"></i> </a>
+        <a class="btn btn-icon waves-effect btn-blue mr-1" target="_blank"
+          href="https://vk.com/share.php?url=https://coronastatistics.live"> <i class="fab fa-vk"></i> </a>
+        <a class="btn btn-icon waves-effect btn-blue"
+          href="whatsapp://send?text=Coronavirus live statistics and tracker https://coronastatistics.live"
+          data-action="share/whatsapp/share"> <i class="fab fa-whatsapp"></i> </a>
+   
+      </div>
+    </div><!-- end col -->
+
+  </div>
+
+</div> <!-- end container -->
