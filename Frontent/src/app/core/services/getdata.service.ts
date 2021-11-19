@@ -45,7 +45,7 @@ export class GetdataService {
   }
 
   getHeadData(){
-    return this._http.get('').pipe(
+    return this._http.get('https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/head.json').pipe(
       retry(1),
       catchError(this.handleError)
     );

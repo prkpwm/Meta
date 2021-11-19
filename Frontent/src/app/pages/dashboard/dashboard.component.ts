@@ -1,3 +1,4 @@
+import { async } from '@angular/core/testing';
 import {
   Component,
   OnInit,
@@ -25,13 +26,19 @@ import {
 import {
   isUndefined
 } from 'util';
-import { HttpClient } from '@angular/common/http';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { trigger, transition, animate, style, state } from '@angular/animations'
 import { TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { retry, catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { Injectable } from '@angular/core';
 //am4core.useTheme(am4themes_dataviz);
 am4core.useTheme(am4themes_animated);
-
+HttpClient
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -78,8 +85,11 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   public activeCases;
   public casesPer1M;
   public finishedCases;
-  public total_ORDER;
-  public today_ORDER;
+  public headData;
+
+
+  public 
+  
   public sortType = "todayCases";
   
   public countryCodes = COUNTRY_CODES;
@@ -95,7 +105,6 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     });
   }
   calculateSum(index, array = this.countries) {
-    
     var total = 0
     for (var i = 0, _len = array.length; i < _len; i++) {
       total += array[i][index]
@@ -138,16 +147,10 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       }
     });
   }
-  async loadData(){
-    await this._http.get('')
-    .subscribe(res=>{
-      console.log(res)
-    })
-  }
-
 
   
   async ngOnInit() {
+    this.loadData()
     await this.ngDoCheck();
     if(!localStorage.getItem("dontShow")){
       this.showModal();
@@ -155,8 +158,9 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     this.zone.runOutsideAngular(async () => {
       combineLatest(
         this._getDataService.getAll(this.sortType),
-        this._getDataService.getTimelineGlobal(),
-        this.total_ORDER.getHeadData(),
+        this._getDataService.getTimelineGlobal()
+     
+       
      )
      .subscribe(([getAllData, getTimelineData]) => {
        this.isLoading = false;
@@ -192,6 +196,16 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     });
   }
 
+  async loadData(){
+    await this._http.get('https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/ALL.json')
+    .subscribe(res=>{
+      console.log(res)
+      
+    })
+    
+    
+  }
+
   searchCountries(key) {
     if (key) {
       this.countries = this.fuse.search(key);
@@ -217,7 +231,6 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
   loadPieChart() {
     let tempData = this.fuse.list.slice();
-    console.log(tempData)
     this.sortData(tempData, "cases");
     tempData = tempData.reverse();
     let chart = am4core.create("pieChart", am4charts.PieChart);
@@ -294,7 +307,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       this.mapChart.dispose();
     }
     let color = "#21AFDD";
-    if (option == "re") {
+    if (option == "recovered") {
       color = "#10c469";
     } else if (option == "critical") {
       color = "#f9c851";

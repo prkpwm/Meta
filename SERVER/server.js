@@ -58,12 +58,13 @@ app.get("/", async function (request, response) {
 
 app.get("/getDataJSON", async function (request, response) {
   console.log("hello");
-  let history = await axios.get('Data/ALL.json').then(async res => {
-    console.log(res)
 
+  let history = await axios.get(`https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/head.json`).then(async res => {
+    console.log(res.data)
+    return res.data
   })
   response.send(
-    "history"
+    history
   );
 });
 
