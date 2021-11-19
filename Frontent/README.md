@@ -37,5 +37,5 @@ node server.js
 
 
 * Github: [@prkpwm](https://github.com/prkpwm/)
-* LinkedIn: [@OssamaRafique](https://www.linkedin.com/in/pakpoom-srisen-5285591bb/)
+* LinkedIn: [@prkpwm](https://www.linkedin.com/in/pakpoom-srisen-5285591bb/)
 
