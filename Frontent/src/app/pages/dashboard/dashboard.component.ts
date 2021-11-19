@@ -88,7 +88,16 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   public headData;
 
 
-  public 
+
+
+  public Total_ORDER
+  public Today_ORDER
+  public Total_REVENUE
+  public Today_REVENUE
+  public Total_PROFIT
+  public Today_PROFIT
+  public Total_MEMBERS
+  public Today_MEMBERS
   
   public sortType = "todayCases";
   
@@ -197,10 +206,18 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   async loadData(){
-    await this._http.get('https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/ALL.json')
+    await this._http.get('https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/head.json')
     .subscribe(res=>{
       console.log(res)
-      
+      this.Today_ORDER = res['Today_ORDER']
+      this.Total_ORDER = res['Total_ORDER']
+      this.Today_REVENUE = res['Today_REVENUE']
+      this.Total_REVENUE = res['Total_REVENUE']
+      this.Today_PROFIT = res['Today_PROFIT']
+      this.Total_PROFIT = res['Total_PROFIT']
+      this.Today_MEMBERS = res['Today_MEMBERS']
+      this.Total_MEMBERS = res['Total_MEMBERS']
+
     })
     
     
