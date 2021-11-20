@@ -27,10 +27,10 @@
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
 
-            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2"><i class="mdi mdi-trending-up"></i>
+            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2">{{(Today_ORDER / Total_ORDER * 100) | number:'.1-2'}}%<i class="mdi mdi-trending-up"></i>
             </span>
             <h2 class="font-weight-normal"> {{Total_ORDER | number}} </h2>
-            <p class="text-muted">{{Today_ORDER}} {{ 'Shared.TopCards.6' | translate }}</p>
+            <p class="text-muted">{{Today_ORDER | number}} Today</p>
           </div>
           <div class="progress progress-bar-alt-blue progress-sm m-0">
             <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -52,10 +52,10 @@
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
             <span
-              class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%
+              class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(Today_REVENUE / Total_REVENUE * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
-            <h2 class="font-weight-normal"> {{totalDeaths | number}} </h2>
-            <p class="text-muted">{{todayDeaths}} {{ 'Shared.TopCards.6' | translate }}</p>
+            <h2 class="font-weight-normal"> {{Total_REVENUE | number}} </h2>
+            <p class="text-muted">{{Today_REVENUE  | number}} today</p>
           </div>
           <div class="progress progress-bar-alt-danger progress-sm m-0">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -77,10 +77,10 @@
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
             <span
-              class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%
+              class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(Today_PROFIT / Total_PROFIT * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
-            <h2 class="font-weight-normal"> {{totalRecoveries | number}} </h2>
-            <p class="text-muted">{{activeCases | number}} today</p>
+            <h2 class="font-weight-normal"> {{Total_PROFIT | number}} </h2>
+            <p class="text-muted">{{Today_PROFIT | number}} today</p>
           </div>
           <div class="progress progress-bar-alt-success progress-sm m-0">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -103,10 +103,10 @@
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
             <span
-              class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(totalCritical / activeCases * 100) | number:'.1-2'}}%
+              class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(Today_MEMBERS / Total_MEMBERS * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
-            <h2 class="font-weight-normal"> {{totalCritical | number}} </h2>
-            <p class="text-muted">{{casesPer1M | number}} today</p>
+            <h2 class="font-weight-normal"> {{Total_MEMBERS | number}} </h2>
+            <p class="text-muted">{{Today_MEMBERS | number}} today</p>
           </div>
           <div class="progress progress-bar-alt-warning progress-sm m-0">
             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0"

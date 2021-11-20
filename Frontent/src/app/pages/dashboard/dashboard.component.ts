@@ -217,7 +217,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       this.Total_PROFIT = res['Total_PROFIT']
       this.Today_MEMBERS = res['Today_MEMBERS']
       this.Total_MEMBERS = res['Total_MEMBERS']
-
+      
     })
     
     
