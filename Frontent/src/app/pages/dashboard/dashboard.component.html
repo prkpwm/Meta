@@ -146,18 +146,19 @@
         <div class="d-md-none d-inline">
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('cases');">{{ 'Shared.TopCards.1' | translate }}</button>
+            (click)="loadMap('cases');">Order</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('deaths')">{{ 'Shared.TopCards.3' | translate }}</button>
+            (click)="loadMap('deaths')">Revenue</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('recovered')">{{ 'Shared.TopCards.4' | translate }}</button>
+            (click)="loadMap('recovered')">Profit</button>
           <button type="button" class="btn btn-block btn-xs btn-lighten-warning waves-effect waves-light width-xs"
-            (click)="loadMap('critical')">{{ 'Shared.TopCards.5' | translate }}</button>
+            (click)="loadMap('critical')">Member</button>
         </div>
       </div>
     </div><!-- end col -->
+
     <div class="col-xl-4">
       <div class="card-box">
         <div class="float-right">
@@ -172,12 +173,13 @@
           </div>
           <div class="col-md-4 col-4">
             <select class="custom-select" #sortBy (change)="sortCountries(sortBy.value,search.value)">
-              <option selected="" disabled>{{ 'Home.AffectedCountries.4' | translate }}</option>
-              <option value="cases">{{ 'Home.AffectedCountries.5' | translate }}</option>
-              <option value="todayCases">{{ 'Home.AffectedCountries.6' | translate }}</option>
-              <option value="deaths">{{ 'Home.AffectedCountries.7' | translate }}</option>
-              <option value="todayDeaths">{{ 'Home.AffectedCountries.8' | translate }}</option>
-              <option value="recovered">{{ 'Home.AffectedCountries.9' | translate }}</option>
+              <option selected="" disabled>Sort By</option>
+              <option value="cases">Total order</option>
+              <option value="recovered">Today order</option>
+              <option value="todayCases">Total Revenue</option>
+              <option value="deaths">Total Profit</option>
+              <option value="todayDeaths">Total Member</option>
+              
             </select>
           </div>
         </div>
@@ -213,14 +215,12 @@
   <div class="row">
     <div class="col-xl-4">
       <div class="card-box">
-        <h4 class="header-title mb-3">{{ 'Shared.RateDistribution.1' | translate }} </h4>
+        <h4 class="header-title mb-3">Rate Distribution</h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoading">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>
         <div class="inbox-widget" [class.d-none]="isLoading">
-
           <div id="radarChart" style="width: 100%; height: 400px"></div>
-
         </div>
       </div>
     </div><!-- end col -->
@@ -230,7 +230,7 @@
         <div class="float-md-right float-right d-md-inline d-none">
 
         </div>
-        <h4 class="header-title mt-0 mb-3 mt-md-0">{{ 'Shared.InfectionsHistory.1' | translate }}</h4>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">History</h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoading">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>

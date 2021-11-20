@@ -98,6 +98,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   public Today_PROFIT
   public Total_MEMBERS
   public Today_MEMBERS
+  public TimeLineData
   
   public sortType = "todayCases";
   
@@ -206,7 +207,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   async loadData(){
-    await this._http.get('https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/head.json')
+    await this._http.get('http://localhost:5001/getSimpleData')
     .subscribe(res=>{
       console.log(res)
       this.Today_ORDER = res['Today_ORDER']
@@ -217,7 +218,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       this.Total_PROFIT = res['Total_PROFIT']
       this.Today_MEMBERS = res['Today_MEMBERS']
       this.Total_MEMBERS = res['Total_MEMBERS']
-      
+
     })
     
     
@@ -270,25 +271,37 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     this.loadMap("cases");
   }
   
-  loadLineChart(chartType) {
+  async loadTimeLine(){
+    await this._http.get('http://localhost:5001/getTimeLineData')
+    .subscribe(res=>{
+      return res
+    })
+  }
+
+
+  async loadLineChart(chartType) {
     this.caseData = [];
     if (this.lineChart) {
       this.lineChart.dispose();
     }
+    this.TimeLineData = await this.loadTimeLine()
+    console.log(this.TimeLineData)
     Object.keys(this.timeLine).forEach(key => {
       this.caseData.push({
         date: new Date(key),
-        cases: this.timeLine[key].cases,
-        recoveries: this.timeLine[key].recovered,
-        deaths: this.timeLine[key].deaths
+        Revenue: this.timeLine[key].cases,
+        Profit: this.timeLine[key].recovered,
+        Member: this.timeLine[key].deaths
       });
     });
-    this.caseData.push({
-      date: new Date().getTime(),
-      cases: this.totalCases,
-      recoveries: this.totalRecoveries,
-      deaths: this.totalDeaths
-    });
+
+    // this.caseData.push({
+    //   date: new Date().getTime(),
+    //   cases: this.totalCases,
+    //   recoveries: this.totalRecoveries,
+    //   deaths: this.totalDeaths
+    // });
+    console.log(this.caseData)
 
     let chart = am4core.create("lineChart", am4charts.XYChart);
     chart.numberFormatter.numberFormat = "#a";
@@ -306,9 +319,9 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     valueAxis.renderer.labels.template.fill = am4core.color("#adb5bd");
     dateAxis.renderer.labels.template.fill = am4core.color("#adb5bd");
 
-    chart = this.createSeriesLine(chart, "#21AFDD", "cases");
-    chart = this.createSeriesLine(chart, "#10c469", "recoveries");
-    chart = this.createSeriesLine(chart, "#ff5b5b", "deaths");
+    chart = this.createSeriesLine(chart, "#21AFDD", "Revenue");
+    chart = this.createSeriesLine(chart, "#10c469", "Profit");
+    chart = this.createSeriesLine(chart, "#ff5b5b", "Member");
 
     chart.data = this.caseData;
 
@@ -316,8 +329,10 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     chart.legend.labels.template.fill = am4core.color("#adb5bd");
 
     chart.cursor = new am4charts.XYCursor();
+    
     this.lineChart = chart;
   }
+
   loadMap(option) {
     this.isLoadingMap=true;
     if (this.mapChart) {
@@ -397,6 +412,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       }
       return longitude;
     })
+
     let polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
     polygonTemplate.fill = am4core.color("#282d37");
@@ -405,26 +421,29 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   loadRadar() {
+
     let chart = am4core.create("radarChart", am4charts.RadarChart);
-    
+    let cal = (this.Total_REVENUE+this.Total_ORDER+this.Total_PROFIT+this.Total_MEMBERS)
     // Add data
     chart.data = [{
-      "category": this.translations.critical,
-      "value": this.totalCritical / this.activeCases * 100,
+      "category": "ORDER",
+      "value": 100,
       "full": 100
     }, {
-      "category": this.translations.deaths,
-      "value": this.totalDeaths / this.finishedCases * 100,
+      "category": "REVENUE",
+      "value": 96,
       "full": 100
     }, {
-      "category": this.translations.recovered,
-      "value": this.totalRecoveries / this.finishedCases * 100,
+      "category": "PROFIT",
+      "value": 37,
       "full": 100
     }, {
-      "category": this.translations.active,
-      "value": 100-(this.totalCritical / this.activeCases * 100),
+      "category": "MEMBERS",
+      "value": 12,
       "full": 100
     }];
+
+    // console.log(chart.data)
 
     // Make chart not full circle
     chart.startAngle = -90;
@@ -502,6 +521,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     
     this.radarChart = chart;
   }
+
   createSeriesLine(chart, color, type) {
     let name = type.charAt(0).toUpperCase() + type.slice(1);
     if(type=="cases"){

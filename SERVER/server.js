@@ -56,17 +56,25 @@ app.get("/", async function (request, response) {
   );
 });
 
-app.get("/getDataJSON", async function (request, response) {
-  console.log("hello");
-
+app.get("/getSimpleData", async function (request, response) {
   let history = await axios.get(`https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/head.json`).then(async res => {
-    console.log(res.data)
     return res.data
   })
   response.send(
     history
   );
 });
+
+
+app.get("/getTimeLineData", async function (request, response) {
+  let history = await axios.get(`https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/ALL.json`).then(async res => {
+    return res.data
+  })
+  response.send(
+    history
+  );
+});
+
 
 var listener = app.listen(process.env.PORT || 5001, function () {
   console.log("Your app is listening on port " + listener.address().port);
