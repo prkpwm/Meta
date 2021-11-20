@@ -33,6 +33,9 @@ import { HttpClient } from '@angular/common/http';
 import { retry, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
+
+
+
 //am4core.useTheme(am4themes_dataviz);
 am4core.useTheme(am4themes_animated);
 HttpClient
@@ -96,6 +99,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   public Total_MEMBERS
   public Today_MEMBERS
   public TimeLineData
+  public countriesData
   
   public sortType = "todayCases";
   
@@ -159,6 +163,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   async ngOnInit() {
     this.loadData()
     await this.ngDoCheck();
+    this.countries = await this._http.get('http://localhost:5001/getCountries').toPromise()
     if(!localStorage.getItem("dontShow")){
       this.showModal();
     }
@@ -166,23 +171,14 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       combineLatest(
         this._getDataService.getAll(this.sortType),
         this._getDataService.getTimelineGlobal()
-     
-       
+  
      )
      .subscribe(([getAllData, getTimelineData]) => {
        this.isLoading = false;
       this.isLoadingCountries = false;
       this.isLoadingMap = false;
-      this.countries = getAllData;
-      this.totalCases = this.calculateSum("cases");
-      this.totalDeaths = this.calculateSum("deaths");
-      this.totalRecoveries = this.calculateSum("recovered");
-      this.totalCritical = this.calculateSum("critical");
-      this.todayCases = this.calculateSum("todayCases");
-      this.todayDeaths = this.calculateSum("todayDeaths");
-      this.activeCases = this.calculateSum("active");
-      this.casesPer1M = this.calculateSum("casesPerOneMillion");
-      this.finishedCases = this.totalDeaths + this.totalRecoveries;
+      // this.countries = getAllData;
+      // this.finishedCases = this.totalDeaths + this.totalRecoveries;
       this.fuse = new Fuse(this.countries, {
         shouldSort: true,
         threshold: 0.6,
@@ -197,6 +193,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       this.loadLineChart(false);
       this.loadRadar();
       this.loadPieChart();
+      this.loadData()
 
       
      });
@@ -204,17 +201,16 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   async loadData(){
-    let res =  await this._http.get('http://localhost:5001/getSimpleData').toPromise()
-    console.log(res)
-    this.Today_ORDER = res['Today_ORDER']
-    this.Total_ORDER = res['Total_ORDER']
-    this.Today_REVENUE = res['Today_REVENUE']
-    this.Total_REVENUE = res['Total_REVENUE']
-    this.Today_PROFIT = res['Today_PROFIT']
-    this.Total_PROFIT = res['Total_PROFIT']
-    this.Today_MEMBERS = res['Today_MEMBERS']
-    this.Total_MEMBERS = res['Total_MEMBERS']
-
+    let today = await this._http.get('http://localhost:5001/getTodayData').toPromise()
+    this.Today_ORDER = await today['order']
+    this.Total_ORDER = await this._http.get('http://localhost:5001/getSumByName/order').toPromise().then(res=>{return res['summary']})
+    this.Today_REVENUE = await today['revenue']
+    this.Total_REVENUE = await this._http.get('http://localhost:5001/getSumByName/revenue').toPromise().then(res=>{return res['summary']})
+    this.Today_PROFIT = await today['profit']
+    this.Total_PROFIT = await this._http.get('http://localhost:5001/getSumByName/profit').toPromise().then(res=>{return res['summary']})
+    this.Today_MEMBERS = await today['member']
+    this.Total_MEMBERS = await this._http.get('http://localhost:5001/getSumByName/member').toPromise().then(res=>{return res['summary']})
+    this.finishedCases = this.Total_ORDER+this.Total_REVENUE+this.Total_PROFIT
   }
 
   searchCountries(key) {
@@ -242,17 +238,17 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
   loadPieChart() {
     let tempData = this.fuse.list.slice();
-    this.sortData(tempData, "cases");
+    this.sortData(tempData, "revenue");
     tempData = tempData.reverse();
     let chart = am4core.create("pieChart", am4charts.PieChart);
     chart.data = tempData.slice(0, 10);
     let otherCases = tempData.slice(10, tempData.length);
     chart.data.push({
       country: 'Other',
-      cases: this.calculateSum("cases", otherCases)
+      revenue: this.calculateSum("revenue", otherCases)
     });
     let pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "cases";
+    pieSeries.dataFields.value = "revenue";
     pieSeries.dataFields.category = "country";
     pieSeries.labels.template.disabled = true;
     pieSeries.ticks.template.disabled = true;
@@ -261,23 +257,16 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     pieSeries.slices.template.strokeOpacity = 1;
     this.pieChart = chart;
 
-    this.loadMap("cases");
+    this.loadMap("order");
   }
   
-  async loadTimeLine(){
-    await this._http.get('http://localhost:5001/getTimeLineData')
-    .subscribe(res=>{
-      return res
-    })
-  }
-
 
   async loadLineChart(chartType) {
     this.caseData = [];
     if (this.lineChart) {
       this.lineChart.dispose();
     }
-    this.TimeLineData =  await this._http.get('http://localhost:5001/getTimeLineData').toPromise()
+    this.TimeLineData =  await this._http.get('http://localhost:5001/getTimeLine').toPromise()
     for(let i =0;i<this.TimeLineData.length;i++){
       this.caseData.push({
         date: new Date(this.TimeLineData[i]['Datetime']),
@@ -287,7 +276,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
         Order:this.TimeLineData[i]['order']
       });
     }
-    console.log(this.caseData)
+    // console.log(this.caseData)
 
     let chart = am4core.create("lineChart", am4charts.XYChart);
     chart.numberFormatter.numberFormat = "#a";
@@ -307,8 +296,8 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
     chart = this.createSeriesLine(chart, "#ff5b5b", "Revenue");
     chart = this.createSeriesLine(chart, "#10c469", "Profit");
-    chart = this.createSeriesLine(chart, "#21AFDD", "Member");
-    chart = this.createSeriesLine(chart, "#ff5b5b", "Order");
+    chart = this.createSeriesLine(chart, "#f9c851", "Member");
+    chart = this.createSeriesLine(chart, "#21AFDD", "Order");
 
     chart.data = this.caseData;
 
@@ -320,30 +309,45 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     this.lineChart = chart;
   }
 
-  loadMap(option) {
+  async loadMap(option) {
     this.isLoadingMap=true;
     if (this.mapChart) {
       this.mapChart.dispose();
     }
     let color = "#21AFDD";
-    if (option == "recovered") {
+    if (option == "profit") {
       color = "#10c469";
-    } else if (option == "critical") {
+    } else if (option == "member") {
       color = "#f9c851";
-    } else if (option == "deaths") {
+    } else if (option == "revenue") {
       color = "#ff5b5b";
+    }else if (option == "order") {
+      color = "#21AFDD";
     }
     let mapData = [];
-    this.fuse.list.forEach(element => {
-      if(element[option]!=0){
-        mapData.push({
-          id: this.countryCodes[element.country],
-          name: element.country,
-          value: element[option],
+    this.countriesData = this.countries
+    // console.log(this.countriesData,option)
+    for(let i =0;i<this.countriesData.length;i++){
+      mapData.push({
+          id: this.countryCodes[this.countriesData[i]['country']],
+          name: this.countriesData[i]['country'],
+          value: this.countriesData[i][option],
           color: am4core.color(color)
-        });
-      }
-    });
+      });
+    }
+    // console.log(this.fuse.list)
+
+    // this.fuse.list.forEach(element => {
+    //   console.log(element.country)
+    //   if(element[option]!=0){
+    //     mapData.push({
+    //       id: this.countryCodes[element.country],
+    //       name: element.country,
+    //       value: element[option],
+    //       color: am4core.color(color)
+    //     });
+    //   }
+    // });
 
     let chartMap = am4core.create("worldChart", am4maps.MapChart);
     // Set map definition
@@ -511,13 +515,6 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
   createSeriesLine(chart, color, type) {
     let name = type.charAt(0).toUpperCase() + type.slice(1);
-    if(type=="cases"){
-      name = this.translations.cases;
-    } else if(type=="recoveries"){
-      name = this.translations.recovered;
-    } else if(type=="deaths"){
-      name = this.translations.deaths;
-    }
     let series = chart.series.push(new am4charts.LineSeries());
     series.dataFields.valueY = type;
     series.fill = am4core.color(color);

@@ -7,7 +7,7 @@ const config = require('./config.json');
 const Redis = require('ioredis');
 const csv = require('csvtojson')
 
-let basePathHistory = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/";
+// let basePathHistory = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/";
 
 
 app.use(cors());
@@ -20,66 +20,66 @@ const redis = new Redis(config.redis.host, {
 const keys = config.keys
 
 
-var getAll = async () => {
-  let response;
-  try {
-    response = await axios.get("https://www.worldometers.info/coronavirus/");
-    if (response.status !== 200) {
-      console.log("ERROR");
-    }
-  } catch (err) {
-    return null;
-  }
-  // to store parsed data
-  const result = {};
-  // get HTML and parse death rates
-  const html = cheerio.load(response.data);
-  html(".maincounter-number").filter((i, el) => {
-    let count = el.children[0].next.children[0].data || "0";
-    count = parseInt(count.replace(/,/g, "") || "0", 10);
-    // first one is
-    if (i === 0) {
-      result.cases = count;
-    } else if (i === 1) {
-      result.deaths = count;
-    } else {
-      result.recovered = count;
-    }
-  });
-  result.updated = Date.now()
-  const string = JSON.stringify(result);
-  redis.set(keys.all, string);
-  console.log("Updated The Cases");
-}
-function fillResult(html, idExtension) {
-	const countriesTable = html(`table#main_table_countries_${idExtension}`);
-	const countries = countriesTable.children('tbody:first-of-type').children('tr:not(.row_continent)').map(mapRows).get();
-	const continents = countriesTable.children('tbody:first-of-type').children('tr.row_continent').map(mapRows).get().map(el => continentMapping(el, countries)).filter(data => !!data.continent);
-	const world = countries.shift();
-	world.population = countries.map(country => country.population).reduce((sum, pop) => sum + pop);
-	world.tests = countries.map(country => country.tests).reduce((sum, test) => sum + test);
-	world.testsPerOneMillion = toPerOneMillion(world.population, world.tests);
-	world.activePerOneMillion = toPerOneMillion(world.population, world.active);
-	world.recoveredPerOneMillion = toPerOneMillion(world.population, world.recovered);
-	world.criticalPerOneMillion = toPerOneMillion(world.population, world.critical);
-	return { world, countries, continents };
-}
-const getCountries = async () => {
-	try {
-		const html = cheerio.load((await axios.get('https://www.worldometers.info/coronavirus')).data);
-		['today', 'yesterday', 'yesterday2'].forEach(key => {
-      const data = fillResult(html, key);
-      let countries = [data.world, ...getOrderByCountryName(data.countries)].filter(country => country.country!="World");
-      console.log(countries)
-			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}countries`], JSON.stringify(countries));
-			console.info(`Updated ${key} countries statistics: ${data.countries.length + 1}`);
-			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}continents`], JSON.stringify(getOrderByCountryName(data.continents)));
-			console.info(`Updated ${key} continents statistics: ${data.continents.length}`);
-		});
-	} catch (err) {
-		console.log('Error: Requesting WorldoMeters failed!', err);
-	}
-};
+// var getAll = async () => {
+//   let response;
+//   try {
+//     response = await axios.get("https://www.worldometers.info/coronavirus/");
+//     if (response.status !== 200) {
+//       console.log("ERROR");
+//     }
+//   } catch (err) {
+//     return null;
+//   }
+//   // to store parsed data
+//   const result = {};
+//   // get HTML and parse death rates
+//   const html = cheerio.load(response.data);
+//   html(".maincounter-number").filter((i, el) => {
+//     let count = el.children[0].next.children[0].data || "0";
+//     count = parseInt(count.replace(/,/g, "") || "0", 10);
+//     // first one is
+//     if (i === 0) {
+//       result.cases = count;
+//     } else if (i === 1) {
+//       result.deaths = count;
+//     } else {
+//       result.recovered = count;
+//     }
+//   });
+//   result.updated = Date.now()
+//   const string = JSON.stringify(result);
+//   redis.set(keys.all, string);
+//   console.log("Updated The Cases");
+// }
+// function fillResult(html, idExtension) {
+// 	const countriesTable = html(`table#main_table_countries_${idExtension}`);
+// 	const countries = countriesTable.children('tbody:first-of-type').children('tr:not(.row_continent)').map(mapRows).get();
+// 	const continents = countriesTable.children('tbody:first-of-type').children('tr.row_continent').map(mapRows).get().map(el => continentMapping(el, countries)).filter(data => !!data.continent);
+// 	const world = countries.shift();
+// 	world.population = countries.map(country => country.population).reduce((sum, pop) => sum + pop);
+// 	world.tests = countries.map(country => country.tests).reduce((sum, test) => sum + test);
+// 	world.testsPerOneMillion = toPerOneMillion(world.population, world.tests);
+// 	world.activePerOneMillion = toPerOneMillion(world.population, world.active);
+// 	world.recoveredPerOneMillion = toPerOneMillion(world.population, world.recovered);
+// 	world.criticalPerOneMillion = toPerOneMillion(world.population, world.critical);
+// 	return { world, countries, continents };
+// }
+// const getCountries = async () => {
+// 	try {
+// 		const html = cheerio.load((await axios.get('https://www.worldometers.info/coronavirus')).data);
+// 		['today', 'yesterday', 'yesterday2'].forEach(key => {
+//       const data = fillResult(html, key);
+//       let countries = [data.world, ...getOrderByCountryName(data.countries)].filter(country => country.country!="World");
+//       console.log(countries)
+// 			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}countries`], JSON.stringify(countries));
+// 			console.info(`Updated ${key} countries statistics: ${data.countries.length + 1}`);
+// 			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}continents`], JSON.stringify(getOrderByCountryName(data.continents)));
+// 			console.info(`Updated ${key} continents statistics: ${data.continents.length}`);
+// 		});
+// 	} catch (err) {
+// 		console.log('Error: Requesting WorldoMeters failed!', err);
+// 	}
+// };
 const columns = ['index', 'country', 'cases', 'todayCases', 'deaths', 'todayDeaths', 'recovered', 'todayRecovered', 'active',
 	'critical', 'casesPerOneMillion', 'deathsPerOneMillion', 'tests', 'testsPerOneMillion', 'population', 'continent', 'oneCasePerPeople', 'oneDeathPerPeople', 'oneTestPerPeople'];
 const mapRows = (_, row) => {
@@ -131,40 +131,40 @@ const continentMapping = (element, countries) => {
 };
 const getOrderByCountryName = (data) => data.sort((a, b) => a.country < b.country ? -1 : 1);
 
-var getHistory = async () => {
-  let history = await axios.get(`https://pomber.github.io/covid19/timeseries.json`).then(async response => {
-    const res = response.data;
-    const hKeys = Object.keys(res);
-    let newHistory = [];
-    for (key of hKeys) {
-      const newArr = res[key].map(({
-        confirmed: cases,
-        ...rest
-      }) => ({
-        cases,
-        ...rest
-      }));
+// var getHistory = async () => {
+//   let history = await axios.get(`https://pomber.github.io/covid19/timeseries.json`).then(async response => {
+//     const res = response.data;
+//     const hKeys = Object.keys(res);
+//     let newHistory = [];
+//     for (key of hKeys) {
+//       const newArr = res[key].map(({
+//         confirmed: cases,
+//         ...rest
+//       }) => ({
+//         cases,
+//         ...rest
+//       }));
 
-      newHistory.push({
-        country: key,
-        timeline: newArr
-      });
-    }
-    redis.set(keys.timeline, JSON.stringify(newHistory));
-    let globalTimeline = JSON.stringify(await calculateAllTimeline(newHistory));
-    redis.set(keys.timelineglobal, globalTimeline);
-    console.log(`Updated JHU CSSE Timeline`);
-  });
-}
+//       newHistory.push({
+//         country: key,
+//         timeline: newArr
+//       });
+//     }
+//     redis.set(keys.timeline, JSON.stringify(newHistory));
+//     let globalTimeline = JSON.stringify(await calculateAllTimeline(newHistory));
+//     redis.set(keys.timelineglobal, globalTimeline);
+//     console.log(`Updated JHU CSSE Timeline`);
+//   });
+// }
 
 
-getCountries()
-getAll()
-getHistory()
+// getCountries()
+// getAll()
+// getHistory()
 
-setInterval(getCountries, config.interval);
-setInterval(getAll, config.interval);
-setInterval(getHistory, config.interval);
+// setInterval(getCountries, config.interval);
+// setInterval(getAll, config.interval);
+// setInterval(getHistory, config.interval);
 
 
 let calculateAllTimeline = async (timeline) => {
@@ -185,88 +185,88 @@ let calculateAllTimeline = async (timeline) => {
   return data;
 }
 
-app.get("/", async function (request, response) {
-  console.log("hello");
-  let a = JSON.parse(await redis.get(keys.all))
-  response.send(
-    `${a.cases} cases are reported of the COVID-19<br> ${a.deaths} have died from it <br>\n${a.recovered} have recovered from it. <br>
-    View the dashboard here : <a href="https://coronastatistics.live">coronastatistics.live</a>`
-  );
-});
-var listener = app.listen(process.env.PORT || 5001, function () {
-  console.log("Your app is listening on port " + listener.address().port);
-});
-app.get("/all/", async function (req, res) {
-  let all = JSON.parse(await redis.get(keys.all))
-  res.send(all);
-});
-app.get("/countries/", async function (req, res) {
-  let countries = JSON.parse(await redis.get(keys.countries))
-  if (req.query['sort']) {
-    try {
-      const sortProp = req.query['sort'];
-      countries.sort((a, b) => {
-        if (a[sortProp] < b[sortProp]) {
-          return -1;
-        } else if (a[sortProp] > b[sortProp]) {
-          return 1;
-        }
-        return 0;
-      })
-    } catch (e) {
-      console.error("ERROR while sorting", e);
-      res.status(422).send(e);
-      return;
-    }
-  }
-  res.send(countries.reverse());
-});
-app.get("/countries/:country", async function (req, res) {
-  let countries = JSON.parse(await redis.get(keys.countries))
-  let country = countries.find(
-    e => e.country.toLowerCase().includes(req.params.country.toLowerCase())
-  );
-  if (!country) {
-    res.send("false");
-    return;
-  }
-  res.send(country);
-});
+// app.get("/", async function (request, response) {
+//   console.log("hello");
+//   let a = JSON.parse(await redis.get(keys.all))
+//   response.send(
+//     `${a.cases} cases are reported of the COVID-19<br> ${a.deaths} have died from it <br>\n${a.recovered} have recovered from it. <br>
+//     View the dashboard here : <a href="https://coronastatistics.live">coronastatistics.live</a>`
+//   );
+// });
+// var listener = app.listen(process.env.PORT || 5001, function () {
+//   console.log("Your app is listening on port " + listener.address().port);
+// });
+// app.get("/all/", async function (req, res) {
+//   let all = JSON.parse(await redis.get(keys.all))
+//   res.send(all);
+// });
+// app.get("/countries/", async function (req, res) {
+//   let countries = JSON.parse(await redis.get(keys.countries))
+//   if (req.query['sort']) {
+//     try {
+//       const sortProp = req.query['sort'];
+//       countries.sort((a, b) => {
+//         if (a[sortProp] < b[sortProp]) {
+//           return -1;
+//         } else if (a[sortProp] > b[sortProp]) {
+//           return 1;
+//         }
+//         return 0;
+//       })
+//     } catch (e) {
+//       console.error("ERROR while sorting", e);
+//       res.status(422).send(e);
+//       return;
+//     }
+//   }
+//   res.send(countries.reverse());
+// });
+// app.get("/countries/:country", async function (req, res) {
+//   let countries = JSON.parse(await redis.get(keys.countries))
+//   let country = countries.find(
+//     e => e.country.toLowerCase().includes(req.params.country.toLowerCase())
+//   );
+//   if (!country) {
+//     res.send("false");
+//     return;
+//   }
+//   res.send(country);
+// });
 
-app.get("/timeline", async function (req, res) {
+// app.get("/timeline", async function (req, res) {
 
-  let data = JSON.parse(await redis.get(keys.timeline))
-  res.send(data);
-});
-app.get("/timeline/global", async function (req, res) {
+//   let data = JSON.parse(await redis.get(keys.timeline))
+//   res.send(data);
+// });
+// app.get("/timeline/global", async function (req, res) {
 
-  let data = JSON.parse(await redis.get(keys.timelineglobal))
-  res.send(data);
-});
+//   let data = JSON.parse(await redis.get(keys.timelineglobal))
+//   res.send(data);
+// });
 
-app.get("/timeline/:country", async function (req, res) {
-  let data = JSON.parse(await redis.get(keys.timeline));
-  let country = data.find(
-    e => e.country.toLowerCase() === req.params.country.toLowerCase()
-  );
-  if (!country) {
-    res.send(false);
-    return;
-  }
-  country = data.filter(
-    e => e.country.toLowerCase() === req.params.country.toLowerCase()
-  );
-  if (country.length == 1) {
-    res.send({
-      multiple: false,
-      name: country[0].country,
-      data: country[0]
-    });
-    return;
-  }
-  res.send({
-    multiple: true,
-    name: country[0].country,
-    data: country
-  });
-});
+// app.get("/timeline/:country", async function (req, res) {
+//   let data = JSON.parse(await redis.get(keys.timeline));
+//   let country = data.find(
+//     e => e.country.toLowerCase() === req.params.country.toLowerCase()
+//   );
+//   if (!country) {
+//     res.send(false);
+//     return;
+//   }
+//   country = data.filter(
+//     e => e.country.toLowerCase() === req.params.country.toLowerCase()
+//   );
+//   if (country.length == 1) {
+//     res.send({
+//       multiple: false,
+//       name: country[0].country,
+//       data: country[0]
+//     });
+//     return;
+//   }
+//   res.send({
+//     multiple: true,
+//     name: country[0].country,
+//     data: country
+//   });
+// });

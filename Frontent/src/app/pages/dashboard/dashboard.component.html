@@ -11,7 +11,7 @@
             <h6 class="text-white">Have you seen our lastest blog post? <span class="text-blue">Click!</span>
             </h6>
           </div>
-  
+
         </div>
       </div>
     </div>
@@ -27,7 +27,8 @@
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
 
-            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2">{{(Today_ORDER / Total_ORDER * 100) | number:'.1-2'}}%<i class="mdi mdi-trending-up"></i>
+            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2">{{(Today_ORDER / Total_ORDER * 100) |
+              number:'.1-2'}}%<i class="mdi mdi-trending-up"></i>
             </span>
             <h2 class="font-weight-normal"> {{Total_ORDER | number}} </h2>
             <p class="text-muted">{{Today_ORDER | number}} Today</p>
@@ -51,11 +52,11 @@
             <i class="fas fa-circle-notch fa-spin m-2"></i>
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
-            <span
-              class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(Today_REVENUE / Total_REVENUE * 100) | number:'.1-2'}}%
+            <span class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(Today_REVENUE / Total_REVENUE *
+              100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{Total_REVENUE | number}} </h2>
-            <p class="text-muted">{{Today_REVENUE  | number}} today</p>
+            <p class="text-muted">{{Today_REVENUE | number}} today</p>
           </div>
           <div class="progress progress-bar-alt-danger progress-sm m-0">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -76,8 +77,8 @@
             <i class="fas fa-circle-notch fa-spin m-2"></i>
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
-            <span
-              class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(Today_PROFIT / Total_PROFIT * 100) | number:'.1-2'}}%
+            <span class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(Today_PROFIT / Total_PROFIT * 100)
+              | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{Total_PROFIT | number}} </h2>
             <p class="text-muted">{{Today_PROFIT | number}} today</p>
@@ -102,8 +103,8 @@
             <i class="fas fa-circle-notch fa-spin m-2"></i>
           </div>
           <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
-            <span
-              class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(Today_MEMBERS / Total_MEMBERS * 100) | number:'.1-2'}}%
+            <span class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(Today_MEMBERS / Total_MEMBERS *
+              100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{Total_MEMBERS | number}} </h2>
             <p class="text-muted">{{Today_MEMBERS | number}} today</p>
@@ -128,13 +129,13 @@
       <div class="card-box">
         <div class="float-md-right float-right d-md-inline d-none">
           <button type="button" class="btn btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('cases');"> Order</button>
+            (click)="loadMap('order');"> Order</button>
           <button type="button" class="btn btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('deaths')">Revenue</button>
+            (click)="loadMap('revenue')">Revenue</button>
           <button type="button" class="btn btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('recovered')">Profit</button>
+            (click)="loadMap('profit')">Profit</button>
           <button type="button" class="btn btn-xs btn-lighten-warning waves-effect waves-light width-xs"
-            (click)="loadMap('critical')">Member</button>
+            (click)="loadMap('member')">Member</button>
         </div>
         <h4 class="header-title mt-0 mb-3 mt-md-0">Worldwide</h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoadingMap">
@@ -146,15 +147,15 @@
         <div class="d-md-none d-inline">
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('cases');">Order</button>
+            (click)="loadMap('order');">Order</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('deaths')">Revenue</button>
+            (click)="loadMap('revenue')">Revenue</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('recovered')">Profit</button>
+            (click)="loadMap('profit')">Profit</button>
           <button type="button" class="btn btn-block btn-xs btn-lighten-warning waves-effect waves-light width-xs"
-            (click)="loadMap('critical')">Member</button>
+            (click)="loadMap('member')">Member</button>
         </div>
       </div>
     </div><!-- end col -->
@@ -179,7 +180,7 @@
               <option value="todayCases">Total Revenue</option>
               <option value="deaths">Total Profit</option>
               <option value="todayDeaths">Total Member</option>
-              
+
             </select>
           </div>
         </div>
@@ -189,21 +190,21 @@
         <div class="infectedCountries" [class.d-none]="isLoadingCountries">
           <perfect-scrollbar #perfectscrollbar style="height:346px;">
             <div class="infectedCountry" *ngFor="let country of countries">
-              <a [routerLink]="[ '/country', country.country.toLowerCase() ]">
-                <div class="infectedCountryFlag">
-                  <img *ngIf="countryCodes[country.country] else unknown" style="height: 30px;
+
+              <div class="infectedCountryFlag">
+                <img *ngIf="countryCodes[country.country] else unknown" style="height: 30px;
                 width: 40px;" src="assets/flags/{{countryCodes[country.country].toLowerCase()}}.svg"
-                    alt="{{country.country}}">
-                  <ng-template #unknown>
-                    <img src="assets/flags/unknown.svg" alt="{{country.country}}">
-                  </ng-template>
-                </div>
-                <h5 class="infectedCountryName mt-0 mb-1">{{country.country}}</h5>
-                <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.cases | number}}
-                  Revenue</span> & <span class="text-success">{{country.deaths | number}} Profit</span></p>
-                <p class="infectedCountryCases text-blue">+{{country.todayCases | number}} Revenue</p>
-                <p class="infectedCountryDeaths text-danger">+{{country.todayDeaths | number}} Profit</p>
-              </a>
+                  alt="{{country.country}}">
+                <ng-template #unknown>
+                  <img src="assets/flags/unknown.svg" alt="{{country.country}}">
+                </ng-template>
+              </div>
+              <h5 class="infectedCountryName mt-0 mb-1">{{country.country}}</h5>
+              <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.revenue | number}}
+                  Revenue</span> & <span class="text-success">{{country.profit | number}} Profit</span></p>
+              <p class="infectedCountryCases text-blue">+{{country.todayrevenue | number}} Revenue</p>
+              <p class="infectedCountryDeaths text-danger">+{{country.todayprofit | number}} Profit</p>
+
             </div>
           </perfect-scrollbar>
 
@@ -244,7 +245,7 @@
 
 
   <div class="row">
-    
+
 
     <div class="col-xl-5">
       <div class="card-box">
@@ -260,7 +261,7 @@
                       <i class="fas fa-circle-notch fa-spin m-2 text-blue"></i>
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-success">
-                      {{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%</h2>
+                      {{(Total_REVENUE / finishedCases * 100) | number:'.1-2'}}%</h2>
                     <h5>Success</h5>
                   </div>
                 </div>
@@ -273,7 +274,7 @@
                       <i class="fas fa-circle-notch fa-spin m-2 text-danger"></i>
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-danger">
-                      {{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%</h2>
+                      {{(Total_ORDER / finishedCases * 100) | number:'.1-2'}}%</h2>
                     <h5>Cancel</h5>
                   </div>
                 </div>
@@ -286,7 +287,7 @@
                       <i class="fas fa-circle-notch fa-spin m-2 text-warning"></i>
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-warning">
-                      {{(totalCritical / activeCases * 100) | number:'.1-2'}}%</h2>
+                      {{(Total_PROFIT / finishedCases * 100) | number:'.1-2'}}%</h2>
                     <h5>On progress</h5>
                   </div>
                 </div>
@@ -298,8 +299,8 @@
                     <div class="fa-3x text-center" [class.d-none]="!isLoading">
                       <i class="fas fa-circle-notch fa-spin m-2 text-info"></i>
                     </div>
-                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-info" *ngIf="fuse">
-                      {{fuse.list.length}}</h2>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-info">
+                      {{Total_MEMBERS | number}}</h2>
                     <h5>In-Basket</h5>
                   </div>
                 </div>
@@ -324,13 +325,14 @@
 
     <div class="col-xl-3">
       <div class="card-box text-center">
-        <h5>Time Now</h5>
+        <h5>Time Now </h5>
+        <p>Additional information is also provided, including whether that timezone is currently.</p>
         <app-countup></app-countup>
       </div>
       <div class="card-box text-center">
 
         <h5>Share</h5>
-       
+        <p>We don't use cookies! More details in our Privacy Policy.</p>
         <a class="btn btn-icon waves-effect btn-blue mr-1" target="_blank"
           href="https://www.facebook.com/sharer/sharer.php?u=https://coronastatistics.live"> <i
             class="fab fa-facebook"></i> </a>
@@ -342,7 +344,7 @@
         <a class="btn btn-icon waves-effect btn-blue"
           href="whatsapp://send?text=Coronavirus live statistics and tracker https://coronastatistics.live"
           data-action="share/whatsapp/share"> <i class="fab fa-whatsapp"></i> </a>
-   
+
       </div>
     </div><!-- end col -->
 
