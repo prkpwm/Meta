@@ -1,2192 +1,2192 @@
 [
 	{
 		"Datetime":"2020-10-10 00:00:00",
-		"revenue":4044385,
-		"profit":72637,
-		"member":881
+		"revenue":3929484,
+		"profit":297542,
+		"member":59258
 	},
 	{
 		"Datetime":"2020-10-11 00:00:00",
-		"revenue":6710271,
-		"profit":46931,
-		"member":118
+		"revenue":3985554,
+		"profit":367250,
+		"member":59973
 	},
 	{
 		"Datetime":"2020-10-12 00:00:00",
-		"revenue":5387668,
-		"profit":15972,
-		"member":309
+		"revenue":4061928,
+		"profit":380228,
+		"member":60343
 	},
 	{
 		"Datetime":"2020-10-13 00:00:00",
-		"revenue":7795896,
-		"profit":63317,
-		"member":598
+		"revenue":4135195,
+		"profit":389104,
+		"member":61277
 	},
 	{
 		"Datetime":"2020-10-14 00:00:00",
-		"revenue":3531128,
-		"profit":49243,
-		"member":708
+		"revenue":4143482,
+		"profit":486762,
+		"member":61592
 	},
 	{
 		"Datetime":"2020-10-15 00:00:00",
-		"revenue":2465171,
-		"profit":16977,
-		"member":451
+		"revenue":4138701,
+		"profit":514301,
+		"member":61946
 	},
 	{
 		"Datetime":"2020-10-16 00:00:00",
-		"revenue":4173827,
-		"profit":15601,
-		"member":395
+		"revenue":4211217,
+		"profit":523939,
+		"member":61912
 	},
 	{
 		"Datetime":"2020-10-17 00:00:00",
-		"revenue":9509641,
-		"profit":71894,
-		"member":171
+		"revenue":4265898,
+		"profit":542676,
+		"member":62255
 	},
 	{
 		"Datetime":"2020-10-18 00:00:00",
-		"revenue":8305890,
-		"profit":83803,
-		"member":974
+		"revenue":4258144,
+		"profit":581963,
+		"member":62953
 	},
 	{
 		"Datetime":"2020-10-19 00:00:00",
-		"revenue":3815305,
-		"profit":76303,
-		"member":624
+		"revenue":4291887,
+		"profit":597621,
+		"member":63106
 	},
 	{
 		"Datetime":"2020-10-20 00:00:00",
-		"revenue":3906713,
-		"profit":97977,
-		"member":345
+		"revenue":4373246,
+		"profit":664040,
+		"member":63953
 	},
 	{
 		"Datetime":"2020-10-21 00:00:00",
-		"revenue":3871943,
-		"profit":93957,
-		"member":441
+		"revenue":4419907,
+		"profit":763602,
+		"member":63895
 	},
 	{
 		"Datetime":"2020-10-22 00:00:00",
-		"revenue":2337236,
-		"profit":16157,
-		"member":290
+		"revenue":4507929,
+		"profit":808343,
+		"member":64381
 	},
 	{
 		"Datetime":"2020-10-23 00:00:00",
-		"revenue":4861983,
-		"profit":77196,
-		"member":867
+		"revenue":4521869,
+		"profit":807312,
+		"member":65062
 	},
 	{
 		"Datetime":"2020-10-24 00:00:00",
-		"revenue":2456814,
-		"profit":45247,
-		"member":230
+		"revenue":4604799,
+		"profit":801892,
+		"member":65015
 	},
 	{
 		"Datetime":"2020-10-25 00:00:00",
-		"revenue":2648300,
-		"profit":36958,
-		"member":702
+		"revenue":4634568,
+		"profit":818784,
+		"member":65086
 	},
 	{
 		"Datetime":"2020-10-26 00:00:00",
-		"revenue":2953351,
-		"profit":90785,
-		"member":794
+		"revenue":4721264,
+		"profit":864503,
+		"member":65881
 	},
 	{
 		"Datetime":"2020-10-27 00:00:00",
-		"revenue":6209905,
-		"profit":24558,
-		"member":102
+		"revenue":4753883,
+		"profit":901274,
+		"member":66074
 	},
 	{
 		"Datetime":"2020-10-28 00:00:00",
-		"revenue":7205886,
-		"profit":87430,
-		"member":141
+		"revenue":4837733,
+		"profit":956590,
+		"member":66688
 	},
 	{
 		"Datetime":"2020-10-29 00:00:00",
-		"revenue":9035981,
-		"profit":83625,
-		"member":309
+		"revenue":4855701,
+		"profit":985086,
+		"member":66684
 	},
 	{
 		"Datetime":"2020-10-30 00:00:00",
-		"revenue":4939756,
-		"profit":89291,
-		"member":851
+		"revenue":4921397,
+		"profit":1084909,
+		"member":66901
 	},
 	{
 		"Datetime":"2020-10-31 00:00:00",
-		"revenue":2833611,
-		"profit":13137,
-		"member":669
+		"revenue":5011255,
+		"profit":1139800,
+		"member":67631
 	},
 	{
 		"Datetime":"2020-11-01 00:00:00",
-		"revenue":2657611,
-		"profit":62828,
-		"member":917
+		"revenue":5073786,
+		"profit":1230994,
+		"member":68393
 	},
 	{
 		"Datetime":"2020-11-02 00:00:00",
-		"revenue":3375759,
-		"profit":14320,
-		"member":384
+		"revenue":5154479,
+		"profit":1267796,
+		"member":69236
 	},
 	{
 		"Datetime":"2020-11-03 00:00:00",
-		"revenue":5928559,
-		"profit":16054,
-		"member":979
+		"revenue":5207624,
+		"profit":1348476,
+		"member":70100
 	},
 	{
 		"Datetime":"2020-11-04 00:00:00",
-		"revenue":3601427,
-		"profit":44505,
-		"member":910
+		"revenue":5213288,
+		"profit":1369003,
+		"member":70473
 	},
 	{
 		"Datetime":"2020-11-05 00:00:00",
-		"revenue":1688994,
-		"profit":14405,
-		"member":704
+		"revenue":5294728,
+		"profit":1450446,
+		"member":70638
 	},
 	{
 		"Datetime":"2020-11-06 00:00:00",
-		"revenue":1604348,
-		"profit":52906,
-		"member":831
+		"revenue":5315721,
+		"profit":1462695,
+		"member":71340
 	},
 	{
 		"Datetime":"2020-11-07 00:00:00",
-		"revenue":1200946,
-		"profit":69868,
-		"member":393
+		"revenue":5390101,
+		"profit":1537873,
+		"member":72301
 	},
 	{
 		"Datetime":"2020-11-08 00:00:00",
-		"revenue":5450666,
-		"profit":60540,
-		"member":100
+		"revenue":5409666,
+		"profit":1628772,
+		"member":72674
 	},
 	{
 		"Datetime":"2020-11-09 00:00:00",
-		"revenue":5338649,
-		"profit":66375,
-		"member":966
+		"revenue":5431028,
+		"profit":1665094,
+		"member":72805
 	},
 	{
 		"Datetime":"2020-11-10 00:00:00",
-		"revenue":3414972,
-		"profit":61833,
-		"member":932
+		"revenue":5456961,
+		"profit":1717245,
+		"member":73066
 	},
 	{
 		"Datetime":"2020-11-11 00:00:00",
-		"revenue":1194769,
-		"profit":80787,
-		"member":935
+		"revenue":5480222,
+		"profit":1742641,
+		"member":73774
 	},
 	{
 		"Datetime":"2020-11-12 00:00:00",
-		"revenue":1939191,
-		"profit":66185,
-		"member":806
+		"revenue":5551540,
+		"profit":1763224,
+		"member":74448
 	},
 	{
 		"Datetime":"2020-11-13 00:00:00",
-		"revenue":2293669,
-		"profit":65412,
-		"member":198
+		"revenue":5595575,
+		"profit":1846208,
+		"member":75111
 	},
 	{
 		"Datetime":"2020-11-14 00:00:00",
-		"revenue":7174451,
-		"profit":56867,
-		"member":322
+		"revenue":5639586,
+		"profit":1941388,
+		"member":75845
 	},
 	{
 		"Datetime":"2020-11-15 00:00:00",
-		"revenue":3961742,
-		"profit":24756,
-		"member":589
+		"revenue":5694393,
+		"profit":2022216,
+		"member":75972
 	},
 	{
 		"Datetime":"2020-11-16 00:00:00",
-		"revenue":9310624,
-		"profit":83526,
-		"member":335
+		"revenue":5719128,
+		"profit":2040781,
+		"member":76823
 	},
 	{
 		"Datetime":"2020-11-17 00:00:00",
-		"revenue":4647403,
-		"profit":66413,
-		"member":203
+		"revenue":5798409,
+		"profit":2095089,
+		"member":77251
 	},
 	{
 		"Datetime":"2020-11-18 00:00:00",
-		"revenue":2162698,
-		"profit":56339,
-		"member":318
+		"revenue":5825400,
+		"profit":2108765,
+		"member":77619
 	},
 	{
 		"Datetime":"2020-11-19 00:00:00",
-		"revenue":8974264,
-		"profit":25310,
-		"member":609
+		"revenue":5894339,
+		"profit":2151642,
+		"member":77576
 	},
 	{
 		"Datetime":"2020-11-20 00:00:00",
-		"revenue":8113690,
-		"profit":48948,
-		"member":947
+		"revenue":5979290,
+		"profit":2159037,
+		"member":77837
 	},
 	{
 		"Datetime":"2020-11-21 00:00:00",
-		"revenue":3460054,
-		"profit":92871,
-		"member":957
+		"revenue":6060253,
+		"profit":2185713,
+		"member":77985
 	},
 	{
 		"Datetime":"2020-11-22 00:00:00",
-		"revenue":5301362,
-		"profit":60753,
-		"member":996
+		"revenue":6155887,
+		"profit":2183545,
+		"member":78886
 	},
 	{
 		"Datetime":"2020-11-23 00:00:00",
-		"revenue":5650697,
-		"profit":78386,
-		"member":543
+		"revenue":6160268,
+		"profit":2242018,
+		"member":79031
 	},
 	{
 		"Datetime":"2020-11-24 00:00:00",
-		"revenue":8089436,
-		"profit":30974,
-		"member":606
+		"revenue":6213828,
+		"profit":2332926,
+		"member":79911
 	},
 	{
 		"Datetime":"2020-11-25 00:00:00",
-		"revenue":8195249,
-		"profit":32868,
-		"member":807
+		"revenue":6221317,
+		"profit":2429643,
+		"member":80372
 	},
 	{
 		"Datetime":"2020-11-26 00:00:00",
-		"revenue":3470201,
-		"profit":15720,
-		"member":728
+		"revenue":6300442,
+		"profit":2526424,
+		"member":80819
 	},
 	{
 		"Datetime":"2020-11-27 00:00:00",
-		"revenue":4484253,
-		"profit":42420,
-		"member":450
+		"revenue":6368598,
+		"profit":2569217,
+		"member":81626
 	},
 	{
 		"Datetime":"2020-11-28 00:00:00",
-		"revenue":4879243,
-		"profit":97810,
-		"member":293
+		"revenue":6430307,
+		"profit":2615842,
+		"member":82131
 	},
 	{
 		"Datetime":"2020-11-29 00:00:00",
-		"revenue":4626671,
-		"profit":84101,
-		"member":470
+		"revenue":6457496,
+		"profit":2700121,
+		"member":82616
 	},
 	{
 		"Datetime":"2020-11-30 00:00:00",
-		"revenue":9722713,
-		"profit":11125,
-		"member":801
+		"revenue":6447959,
+		"profit":2697270,
+		"member":83026
 	},
 	{
 		"Datetime":"2020-12-01 00:00:00",
-		"revenue":7654630,
-		"profit":45278,
-		"member":390
+		"revenue":6462654,
+		"profit":2790132,
+		"member":83914
 	},
 	{
 		"Datetime":"2020-12-02 00:00:00",
-		"revenue":4135006,
-		"profit":28566,
-		"member":325
+		"revenue":6513474,
+		"profit":2854740,
+		"member":84472
 	},
 	{
 		"Datetime":"2020-12-03 00:00:00",
-		"revenue":6143625,
-		"profit":41221,
-		"member":364
+		"revenue":6536534,
+		"profit":2946299,
+		"member":85082
 	},
 	{
 		"Datetime":"2020-12-04 00:00:00",
-		"revenue":5869305,
-		"profit":81294,
-		"member":110
+		"revenue":6542620,
+		"profit":3013543,
+		"member":85838
 	},
 	{
 		"Datetime":"2020-12-05 00:00:00",
-		"revenue":6618657,
-		"profit":64429,
-		"member":934
+		"revenue":6557475,
+		"profit":3056950,
+		"member":86327
 	},
 	{
 		"Datetime":"2020-12-06 00:00:00",
-		"revenue":7304127,
-		"profit":84199,
-		"member":226
+		"revenue":6641157,
+		"profit":3064657,
+		"member":86917
 	},
 	{
 		"Datetime":"2020-12-07 00:00:00",
-		"revenue":4219242,
-		"profit":39792,
-		"member":321
+		"revenue":6649957,
+		"profit":3135884,
+		"member":87134
 	},
 	{
 		"Datetime":"2020-12-08 00:00:00",
-		"revenue":3519268,
-		"profit":40248,
-		"member":347
+		"revenue":6677090,
+		"profit":3175092,
+		"member":87298
 	},
 	{
 		"Datetime":"2020-12-09 00:00:00",
-		"revenue":7718744,
-		"profit":65608,
-		"member":218
+		"revenue":6745100,
+		"profit":3268077,
+		"member":87307
 	},
 	{
 		"Datetime":"2020-12-10 00:00:00",
-		"revenue":1430635,
-		"profit":17151,
-		"member":898
+		"revenue":6769091,
+		"profit":3349105,
+		"member":88264
 	},
 	{
 		"Datetime":"2020-12-11 00:00:00",
-		"revenue":7381314,
-		"profit":94111,
-		"member":790
+		"revenue":6821708,
+		"profit":3420714,
+		"member":89101
 	},
 	{
 		"Datetime":"2020-12-12 00:00:00",
-		"revenue":5159359,
-		"profit":39311,
-		"member":364
+		"revenue":6843343,
+		"profit":3424046,
+		"member":89260
 	},
 	{
 		"Datetime":"2020-12-13 00:00:00",
-		"revenue":7154677,
-		"profit":62330,
-		"member":793
+		"revenue":6905182,
+		"profit":3427443,
+		"member":89343
 	},
 	{
 		"Datetime":"2020-12-14 00:00:00",
-		"revenue":9495312,
-		"profit":76159,
-		"member":820
+		"revenue":6944551,
+		"profit":3477522,
+		"member":90246
 	},
 	{
 		"Datetime":"2020-12-15 00:00:00",
-		"revenue":2845585,
-		"profit":79938,
-		"member":607
+		"revenue":7001784,
+		"profit":3538949,
+		"member":91042
 	},
 	{
 		"Datetime":"2020-12-16 00:00:00",
-		"revenue":1382902,
-		"profit":83177,
-		"member":225
+		"revenue":7069215,
+		"profit":3576285,
+		"member":91710
 	},
 	{
 		"Datetime":"2020-12-17 00:00:00",
-		"revenue":2430408,
-		"profit":60191,
-		"member":628
+		"revenue":7119959,
+		"profit":3595576,
+		"member":91648
 	},
 	{
 		"Datetime":"2020-12-18 00:00:00",
-		"revenue":8688667,
-		"profit":73310,
-		"member":558
+		"revenue":7212511,
+		"profit":3610149,
+		"member":92353
 	},
 	{
 		"Datetime":"2020-12-19 00:00:00",
-		"revenue":5951896,
-		"profit":73318,
-		"member":323
+		"revenue":7293210,
+		"profit":3616547,
+		"member":92747
 	},
 	{
 		"Datetime":"2020-12-20 00:00:00",
-		"revenue":9908449,
-		"profit":95052,
-		"member":213
+		"revenue":7353488,
+		"profit":3685877,
+		"member":92675
 	},
 	{
 		"Datetime":"2020-12-21 00:00:00",
-		"revenue":3742100,
-		"profit":59454,
-		"member":604
+		"revenue":7404504,
+		"profit":3724588,
+		"member":93525
 	},
 	{
 		"Datetime":"2020-12-22 00:00:00",
-		"revenue":4125855,
-		"profit":84576,
-		"member":794
+		"revenue":7473455,
+		"profit":3791641,
+		"member":93644
 	},
 	{
 		"Datetime":"2020-12-23 00:00:00",
-		"revenue":2351413,
-		"profit":44643,
-		"member":474
+		"revenue":7550573,
+		"profit":3806829,
+		"member":94544
 	},
 	{
 		"Datetime":"2020-12-24 00:00:00",
-		"revenue":9418044,
-		"profit":55515,
-		"member":487
+		"revenue":7548529,
+		"profit":3823727,
+		"member":95059
 	},
 	{
 		"Datetime":"2020-12-25 00:00:00",
-		"revenue":6869254,
-		"profit":67564,
-		"member":838
+		"revenue":7636159,
+		"profit":3912886,
+		"member":95794
 	},
 	{
 		"Datetime":"2020-12-26 00:00:00",
-		"revenue":4523452,
-		"profit":97029,
-		"member":767
+		"revenue":7672028,
+		"profit":3928841,
+		"member":95703
 	},
 	{
 		"Datetime":"2020-12-27 00:00:00",
-		"revenue":1512641,
-		"profit":94047,
-		"member":408
+		"revenue":7758808,
+		"profit":3958139,
+		"member":96606
 	},
 	{
 		"Datetime":"2020-12-28 00:00:00",
-		"revenue":8192242,
-		"profit":76116,
-		"member":709
+		"revenue":7845923,
+		"profit":3964936,
+		"member":97439
 	},
 	{
 		"Datetime":"2020-12-29 00:00:00",
-		"revenue":1721484,
-		"profit":66297,
-		"member":945
+		"revenue":7910280,
+		"profit":4037627,
+		"member":98301
 	},
 	{
 		"Datetime":"2020-12-30 00:00:00",
-		"revenue":5739220,
-		"profit":14891,
-		"member":416
+		"revenue":7905078,
+		"profit":4100479,
+		"member":99205
 	},
 	{
 		"Datetime":"2020-12-31 00:00:00",
-		"revenue":2514031,
-		"profit":82541,
-		"member":843
+		"revenue":7918021,
+		"profit":4108332,
+		"member":99777
 	},
 	{
 		"Datetime":"2021-01-01 00:00:00",
-		"revenue":7592343,
-		"profit":40085,
-		"member":866
+		"revenue":7922761,
+		"profit":4100127,
+		"member":99880
 	},
 	{
 		"Datetime":"2021-01-02 00:00:00",
-		"revenue":6528456,
-		"profit":73396,
-		"member":922
+		"revenue":7966572,
+		"profit":4094440,
+		"member":100710
 	},
 	{
 		"Datetime":"2021-01-03 00:00:00",
-		"revenue":5360420,
-		"profit":21595,
-		"member":763
+		"revenue":8061446,
+		"profit":4106365,
+		"member":100688
 	},
 	{
 		"Datetime":"2021-01-04 00:00:00",
-		"revenue":1353347,
-		"profit":25057,
-		"member":712
+		"revenue":8151810,
+		"profit":4141921,
+		"member":101273
 	},
 	{
 		"Datetime":"2021-01-05 00:00:00",
-		"revenue":4537110,
-		"profit":97512,
-		"member":194
+		"revenue":8249832,
+		"profit":4177868,
+		"member":101419
 	},
 	{
 		"Datetime":"2021-01-06 00:00:00",
-		"revenue":3624935,
-		"profit":66737,
-		"member":288
+		"revenue":8285061,
+		"profit":4271680,
+		"member":101357
 	},
 	{
 		"Datetime":"2021-01-07 00:00:00",
-		"revenue":7254569,
-		"profit":62892,
-		"member":520
+		"revenue":8318474,
+		"profit":4368713,
+		"member":101556
 	},
 	{
 		"Datetime":"2021-01-08 00:00:00",
-		"revenue":7802243,
-		"profit":41096,
-		"member":487
+		"revenue":8403100,
+		"profit":4373445,
+		"member":102206
 	},
 	{
 		"Datetime":"2021-01-09 00:00:00",
-		"revenue":5685271,
-		"profit":10290,
-		"member":484
+		"revenue":8428017,
+		"profit":4375874,
+		"member":103148
 	},
 	{
 		"Datetime":"2021-01-10 00:00:00",
-		"revenue":6975692,
-		"profit":22900,
-		"member":673
+		"revenue":8456347,
+		"profit":4431273,
+		"member":103157
 	},
 	{
 		"Datetime":"2021-01-11 00:00:00",
-		"revenue":1012466,
-		"profit":41299,
-		"member":964
+		"revenue":8479965,
+		"profit":4463932,
+		"member":103351
 	},
 	{
 		"Datetime":"2021-01-12 00:00:00",
-		"revenue":7801413,
-		"profit":87042,
-		"member":133
+		"revenue":8492509,
+		"profit":4476652,
+		"member":104177
 	},
 	{
 		"Datetime":"2021-01-13 00:00:00",
-		"revenue":7445875,
-		"profit":43237,
-		"member":311
+		"revenue":8496286,
+		"profit":4543094,
+		"member":104983
 	},
 	{
 		"Datetime":"2021-01-14 00:00:00",
-		"revenue":1944817,
-		"profit":46764,
-		"member":248
+		"revenue":8561942,
+		"profit":4616466,
+		"member":105591
 	},
 	{
 		"Datetime":"2021-01-15 00:00:00",
-		"revenue":7024487,
-		"profit":99880,
-		"member":105
+		"revenue":8624843,
+		"profit":4690124,
+		"member":105516
 	},
 	{
 		"Datetime":"2021-01-16 00:00:00",
-		"revenue":8561571,
-		"profit":82994,
-		"member":270
+		"revenue":8616712,
+		"profit":4686061,
+		"member":105768
 	},
 	{
 		"Datetime":"2021-01-17 00:00:00",
-		"revenue":7828193,
-		"profit":17205,
-		"member":683
+		"revenue":8640620,
+		"profit":4733560,
+		"member":105860
 	},
 	{
 		"Datetime":"2021-01-18 00:00:00",
-		"revenue":2486218,
-		"profit":78367,
-		"member":268
+		"revenue":8738318,
+		"profit":4823851,
+		"member":106813
 	},
 	{
 		"Datetime":"2021-01-19 00:00:00",
-		"revenue":4133158,
-		"profit":90562,
-		"member":178
+		"revenue":8819830,
+		"profit":4822391,
+		"member":107643
 	},
 	{
 		"Datetime":"2021-01-20 00:00:00",
-		"revenue":8578701,
-		"profit":33383,
-		"member":607
+		"revenue":8884691,
+		"profit":4918233,
+		"member":107668
 	},
 	{
 		"Datetime":"2021-01-21 00:00:00",
-		"revenue":8963425,
-		"profit":40149,
-		"member":165
+		"revenue":8898806,
+		"profit":4910868,
+		"member":107618
 	},
 	{
 		"Datetime":"2021-01-22 00:00:00",
-		"revenue":8637140,
-		"profit":44764,
-		"member":706
+		"revenue":8924030,
+		"profit":4964217,
+		"member":107806
 	},
 	{
 		"Datetime":"2021-01-23 00:00:00",
-		"revenue":2862301,
-		"profit":42828,
-		"member":758
+		"revenue":8996570,
+		"profit":5056723,
+		"member":107735
 	},
 	{
 		"Datetime":"2021-01-24 00:00:00",
-		"revenue":4352455,
-		"profit":39498,
-		"member":120
+		"revenue":9000124,
+		"profit":5067660,
+		"member":107822
 	},
 	{
 		"Datetime":"2021-01-25 00:00:00",
-		"revenue":7835398,
-		"profit":76198,
-		"member":712
+		"revenue":9027178,
+		"profit":5126121,
+		"member":108002
 	},
 	{
 		"Datetime":"2021-01-26 00:00:00",
-		"revenue":7957650,
-		"profit":33961,
-		"member":546
+		"revenue":9044728,
+		"profit":5151585,
+		"member":107958
 	},
 	{
 		"Datetime":"2021-01-27 00:00:00",
-		"revenue":8253106,
-		"profit":90056,
-		"member":292
+		"revenue":9115047,
+		"profit":5186346,
+		"member":108810
 	},
 	{
 		"Datetime":"2021-01-28 00:00:00",
-		"revenue":3337839,
-		"profit":73451,
-		"member":575
+		"revenue":9208502,
+		"profit":5204653,
+		"member":109027
 	},
 	{
 		"Datetime":"2021-01-29 00:00:00",
-		"revenue":6167089,
-		"profit":76295,
-		"member":305
+		"revenue":9226028,
+		"profit":5220763,
+		"member":109288
 	},
 	{
 		"Datetime":"2021-01-30 00:00:00",
-		"revenue":3830717,
-		"profit":55738,
-		"member":190
+		"revenue":9284147,
+		"profit":5247676,
+		"member":110003
 	},
 	{
 		"Datetime":"2021-01-31 00:00:00",
-		"revenue":5116852,
-		"profit":26310,
-		"member":438
+		"revenue":9372696,
+		"profit":5328005,
+		"member":110349
 	},
 	{
 		"Datetime":"2021-02-01 00:00:00",
-		"revenue":8426885,
-		"profit":25301,
-		"member":144
+		"revenue":9433661,
+		"profit":5351271,
+		"member":111141
 	},
 	{
 		"Datetime":"2021-02-02 00:00:00",
-		"revenue":5732399,
-		"profit":75063,
-		"member":934
+		"revenue":9482735,
+		"profit":5367969,
+		"member":111730
 	},
 	{
 		"Datetime":"2021-02-03 00:00:00",
-		"revenue":4410347,
-		"profit":45653,
-		"member":739
+		"revenue":9491332,
+		"profit":5454323,
+		"member":112089
 	},
 	{
 		"Datetime":"2021-02-04 00:00:00",
-		"revenue":9584414,
-		"profit":95967,
-		"member":419
+		"revenue":9574092,
+		"profit":5494837,
+		"member":112532
 	},
 	{
 		"Datetime":"2021-02-05 00:00:00",
-		"revenue":3563247,
-		"profit":25029,
-		"member":451
+		"revenue":9650962,
+		"profit":5500667,
+		"member":112786
 	},
 	{
 		"Datetime":"2021-02-06 00:00:00",
-		"revenue":7426878,
-		"profit":13485,
-		"member":987
+		"revenue":9708928,
+		"profit":5583875,
+		"member":113013
 	},
 	{
 		"Datetime":"2021-02-07 00:00:00",
-		"revenue":7734373,
-		"profit":45095,
-		"member":601
+		"revenue":9775962,
+		"profit":5624809,
+		"member":113294
 	},
 	{
 		"Datetime":"2021-02-08 00:00:00",
-		"revenue":1655992,
-		"profit":72936,
-		"member":297
+		"revenue":9766866,
+		"profit":5723086,
+		"member":113660
 	},
 	{
 		"Datetime":"2021-02-09 00:00:00",
-		"revenue":7369543,
-		"profit":16883,
-		"member":510
+		"revenue":9842703,
+		"profit":5746745,
+		"member":113926
 	},
 	{
 		"Datetime":"2021-02-10 00:00:00",
-		"revenue":4435047,
-		"profit":28227,
-		"member":968
+		"revenue":9885388,
+		"profit":5789458,
+		"member":113954
 	},
 	{
 		"Datetime":"2021-02-11 00:00:00",
-		"revenue":4496437,
-		"profit":88733,
-		"member":518
+		"revenue":9961236,
+		"profit":5782716,
+		"member":114624
 	},
 	{
 		"Datetime":"2021-02-12 00:00:00",
-		"revenue":8002849,
-		"profit":85757,
-		"member":539
+		"revenue":10051949,
+		"profit":5851175,
+		"member":114673
 	},
 	{
 		"Datetime":"2021-02-13 00:00:00",
-		"revenue":1643726,
-		"profit":22761,
-		"member":172
+		"revenue":10065818,
+		"profit":5891529,
+		"member":114584
 	},
 	{
 		"Datetime":"2021-02-14 00:00:00",
-		"revenue":1263969,
-		"profit":45576,
-		"member":432
+		"revenue":10112225,
+		"profit":5899229,
+		"member":115055
 	},
 	{
 		"Datetime":"2021-02-15 00:00:00",
-		"revenue":6377536,
-		"profit":28282,
-		"member":256
+		"revenue":10203334,
+		"profit":5985296,
+		"member":115571
 	},
 	{
 		"Datetime":"2021-02-16 00:00:00",
-		"revenue":3397287,
-		"profit":47462,
-		"member":796
+		"revenue":10237600,
+		"profit":6049031,
+		"member":115912
 	},
 	{
 		"Datetime":"2021-02-17 00:00:00",
-		"revenue":1095870,
-		"profit":12145,
-		"member":463
+		"revenue":10246161,
+		"profit":6117598,
+		"member":116761
 	},
 	{
 		"Datetime":"2021-02-18 00:00:00",
-		"revenue":8824595,
-		"profit":98244,
-		"member":788
+		"revenue":10314734,
+		"profit":6157477,
+		"member":117030
 	},
 	{
 		"Datetime":"2021-02-19 00:00:00",
-		"revenue":7780044,
-		"profit":78259,
-		"member":955
+		"revenue":10361107,
+		"profit":6152383,
+		"member":117561
 	},
 	{
 		"Datetime":"2021-02-20 00:00:00",
-		"revenue":6619236,
-		"profit":26566,
-		"member":930
+		"revenue":10431178,
+		"profit":6167391,
+		"member":118436
 	},
 	{
 		"Datetime":"2021-02-21 00:00:00",
-		"revenue":7946646,
-		"profit":60465,
-		"member":119
+		"revenue":10502200,
+		"profit":6158806,
+		"member":119145
 	},
 	{
 		"Datetime":"2021-02-22 00:00:00",
-		"revenue":8130196,
-		"profit":87675,
-		"member":247
+		"revenue":10518048,
+		"profit":6170335,
+		"member":119392
 	},
 	{
 		"Datetime":"2021-02-23 00:00:00",
-		"revenue":8314406,
-		"profit":81067,
-		"member":443
+		"revenue":10534605,
+		"profit":6203257,
+		"member":119901
 	},
 	{
 		"Datetime":"2021-02-24 00:00:00",
-		"revenue":1201580,
-		"profit":91156,
-		"member":174
+		"revenue":10598134,
+		"profit":6290618,
+		"member":120295
 	},
 	{
 		"Datetime":"2021-02-25 00:00:00",
-		"revenue":2200409,
-		"profit":66899,
-		"member":373
+		"revenue":10598036,
+		"profit":6325458,
+		"member":120649
 	},
 	{
 		"Datetime":"2021-02-26 00:00:00",
-		"revenue":2619669,
-		"profit":43787,
-		"member":589
+		"revenue":10640073,
+		"profit":6403376,
+		"member":121616
 	},
 	{
 		"Datetime":"2021-02-27 00:00:00",
-		"revenue":5961351,
-		"profit":80742,
-		"member":896
+		"revenue":10671258,
+		"profit":6398630,
+		"member":121944
 	},
 	{
 		"Datetime":"2021-02-28 00:00:00",
-		"revenue":7855829,
-		"profit":58374,
-		"member":848
+		"revenue":10698606,
+		"profit":6398870,
+		"member":122250
 	},
 	{
 		"Datetime":"2021-03-01 00:00:00",
-		"revenue":3073517,
-		"profit":10619,
-		"member":318
+		"revenue":10724364,
+		"profit":6399525,
+		"member":122406
 	},
 	{
 		"Datetime":"2021-03-02 00:00:00",
-		"revenue":2471255,
-		"profit":90167,
-		"member":813
+		"revenue":10804404,
+		"profit":6455293,
+		"member":122749
 	},
 	{
 		"Datetime":"2021-03-03 00:00:00",
-		"revenue":2580546,
-		"profit":91675,
-		"member":498
+		"revenue":10831004,
+		"profit":6505694,
+		"member":123652
 	},
 	{
 		"Datetime":"2021-03-04 00:00:00",
-		"revenue":7252496,
-		"profit":36441,
-		"member":309
+		"revenue":10900493,
+		"profit":6544297,
+		"member":124089
 	},
 	{
 		"Datetime":"2021-03-05 00:00:00",
-		"revenue":8730711,
-		"profit":32668,
-		"member":129
+		"revenue":10982455,
+		"profit":6578389,
+		"member":125008
 	},
 	{
 		"Datetime":"2021-03-06 00:00:00",
-		"revenue":2409251,
-		"profit":65313,
-		"member":949
+		"revenue":11006252,
+		"profit":6636025,
+		"member":125492
 	},
 	{
 		"Datetime":"2021-03-07 00:00:00",
-		"revenue":9052302,
-		"profit":83137,
-		"member":163
+		"revenue":11094584,
+		"profit":6703268,
+		"member":125575
 	},
 	{
 		"Datetime":"2021-03-08 00:00:00",
-		"revenue":4176619,
-		"profit":50891,
-		"member":559
+		"revenue":11134352,
+		"profit":6734237,
+		"member":126406
 	},
 	{
 		"Datetime":"2021-03-09 00:00:00",
-		"revenue":4168409,
-		"profit":30081,
-		"member":310
+		"revenue":11140344,
+		"profit":6809333,
+		"member":127384
 	},
 	{
 		"Datetime":"2021-03-10 00:00:00",
-		"revenue":7486009,
-		"profit":73781,
-		"member":906
+		"revenue":11230415,
+		"profit":6803637,
+		"member":127896
 	},
 	{
 		"Datetime":"2021-03-11 00:00:00",
-		"revenue":2806002,
-		"profit":47368,
-		"member":617
+		"revenue":11283559,
+		"profit":6834793,
+		"member":128714
 	},
 	{
 		"Datetime":"2021-03-12 00:00:00",
-		"revenue":8436326,
-		"profit":72461,
-		"member":915
+		"revenue":11369532,
+		"profit":6825605,
+		"member":129650
 	},
 	{
 		"Datetime":"2021-03-13 00:00:00",
-		"revenue":6687017,
-		"profit":96775,
-		"member":197
+		"revenue":11379826,
+		"profit":6834084,
+		"member":129683
 	},
 	{
 		"Datetime":"2021-03-14 00:00:00",
-		"revenue":6504758,
-		"profit":17445,
-		"member":936
+		"revenue":11407966,
+		"profit":6835394,
+		"member":129733
 	},
 	{
 		"Datetime":"2021-03-15 00:00:00",
-		"revenue":3346399,
-		"profit":20054,
-		"member":134
+		"revenue":11447509,
+		"profit":6849874,
+		"member":129866
 	},
 	{
 		"Datetime":"2021-03-16 00:00:00",
-		"revenue":5210156,
-		"profit":23383,
-		"member":763
+		"revenue":11462036,
+		"profit":6937692,
+		"member":130287
 	},
 	{
 		"Datetime":"2021-03-17 00:00:00",
-		"revenue":1572246,
-		"profit":79752,
-		"member":787
+		"revenue":11456565,
+		"profit":7019775,
+		"member":130789
 	},
 	{
 		"Datetime":"2021-03-18 00:00:00",
-		"revenue":6721542,
-		"profit":37907,
-		"member":351
+		"revenue":11498992,
+		"profit":7091609,
+		"member":130859
 	},
 	{
 		"Datetime":"2021-03-19 00:00:00",
-		"revenue":9883855,
-		"profit":14071,
-		"member":140
+		"revenue":11511446,
+		"profit":7147981,
+		"member":131512
 	},
 	{
 		"Datetime":"2021-03-20 00:00:00",
-		"revenue":2394150,
-		"profit":38690,
-		"member":983
+		"revenue":11506111,
+		"profit":7144513,
+		"member":131896
 	},
 	{
 		"Datetime":"2021-03-21 00:00:00",
-		"revenue":9652666,
-		"profit":82141,
-		"member":1000
+		"revenue":11600286,
+		"profit":7168636,
+		"member":132504
 	},
 	{
 		"Datetime":"2021-03-22 00:00:00",
-		"revenue":5238986,
-		"profit":37956,
-		"member":154
+		"revenue":11633690,
+		"profit":7205159,
+		"member":132989
 	},
 	{
 		"Datetime":"2021-03-23 00:00:00",
-		"revenue":6253073,
-		"profit":32371,
-		"member":254
+		"revenue":11648242,
+		"profit":7233441,
+		"member":133426
 	},
 	{
 		"Datetime":"2021-03-24 00:00:00",
-		"revenue":2031146,
-		"profit":72898,
-		"member":107
+		"revenue":11704454,
+		"profit":7298509,
+		"member":134246
 	},
 	{
 		"Datetime":"2021-03-25 00:00:00",
-		"revenue":9529932,
-		"profit":28961,
-		"member":564
+		"revenue":11736916,
+		"profit":7323399,
+		"member":134399
 	},
 	{
 		"Datetime":"2021-03-26 00:00:00",
-		"revenue":5072049,
-		"profit":48280,
-		"member":843
+		"revenue":11835511,
+		"profit":7369280,
+		"member":134423
 	},
 	{
 		"Datetime":"2021-03-27 00:00:00",
-		"revenue":6514771,
-		"profit":70799,
-		"member":256
+		"revenue":11921608,
+		"profit":7370833,
+		"member":134442
 	},
 	{
 		"Datetime":"2021-03-28 00:00:00",
-		"revenue":3291914,
-		"profit":66201,
-		"member":152
+		"revenue":11969394,
+		"profit":7403418,
+		"member":135175
 	},
 	{
 		"Datetime":"2021-03-29 00:00:00",
-		"revenue":2087536,
-		"profit":14453,
-		"member":878
+		"revenue":11962551,
+		"profit":7441150,
+		"member":135493
 	},
 	{
 		"Datetime":"2021-03-30 00:00:00",
-		"revenue":6161048,
-		"profit":95611,
-		"member":432
+		"revenue":12042360,
+		"profit":7444849,
+		"member":135843
 	},
 	{
 		"Datetime":"2021-03-31 00:00:00",
-		"revenue":3805641,
-		"profit":15242,
-		"member":108
+		"revenue":12044324,
+		"profit":7467241,
+		"member":135976
 	},
 	{
 		"Datetime":"2021-04-01 00:00:00",
-		"revenue":1821418,
-		"profit":46907,
-		"member":842
+		"revenue":12084208,
+		"profit":7529683,
+		"member":136584
 	},
 	{
 		"Datetime":"2021-04-02 00:00:00",
-		"revenue":5949132,
-		"profit":63992,
-		"member":345
+		"revenue":12159882,
+		"profit":7623447,
+		"member":136862
 	},
 	{
 		"Datetime":"2021-04-03 00:00:00",
-		"revenue":3885027,
-		"profit":29543,
-		"member":423
+		"revenue":12150840,
+		"profit":7658888,
+		"member":137005
 	},
 	{
 		"Datetime":"2021-04-04 00:00:00",
-		"revenue":6356656,
-		"profit":48831,
-		"member":977
+		"revenue":12186109,
+		"profit":7649757,
+		"member":137407
 	},
 	{
 		"Datetime":"2021-04-05 00:00:00",
-		"revenue":8126664,
-		"profit":47904,
-		"member":685
+		"revenue":12225640,
+		"profit":7691771,
+		"member":137493
 	},
 	{
 		"Datetime":"2021-04-06 00:00:00",
-		"revenue":4392209,
-		"profit":66396,
-		"member":235
+		"revenue":12321849,
+		"profit":7783411,
+		"member":138094
 	},
 	{
 		"Datetime":"2021-04-07 00:00:00",
-		"revenue":2084301,
-		"profit":90619,
-		"member":840
+		"revenue":12400770,
+		"profit":7858715,
+		"member":138592
 	},
 	{
 		"Datetime":"2021-04-08 00:00:00",
-		"revenue":4572978,
-		"profit":46844,
-		"member":457
+		"revenue":12435464,
+		"profit":7925282,
+		"member":139204
 	},
 	{
 		"Datetime":"2021-04-09 00:00:00",
-		"revenue":5644700,
-		"profit":34061,
-		"member":123
+		"revenue":12458921,
+		"profit":7955596,
+		"member":139786
 	},
 	{
 		"Datetime":"2021-04-10 00:00:00",
-		"revenue":8212829,
-		"profit":72405,
-		"member":477
+		"revenue":12464063,
+		"profit":8013691,
+		"member":139964
 	},
 	{
 		"Datetime":"2021-04-11 00:00:00",
-		"revenue":2411342,
-		"profit":55790,
-		"member":996
+		"revenue":12473480,
+		"profit":8057348,
+		"member":140878
 	},
 	{
 		"Datetime":"2021-04-12 00:00:00",
-		"revenue":9751672,
-		"profit":61619,
-		"member":907
+		"revenue":12498906,
+		"profit":8096227,
+		"member":141778
 	},
 	{
 		"Datetime":"2021-04-13 00:00:00",
-		"revenue":6511615,
-		"profit":17209,
-		"member":323
+		"revenue":12521625,
+		"profit":8166324,
+		"member":142564
 	},
 	{
 		"Datetime":"2021-04-14 00:00:00",
-		"revenue":2728612,
-		"profit":20507,
-		"member":433
+		"revenue":12530809,
+		"profit":8172829,
+		"member":143532
 	},
 	{
 		"Datetime":"2021-04-15 00:00:00",
-		"revenue":2741122,
-		"profit":55342,
-		"member":294
+		"revenue":12528342,
+		"profit":8211010,
+		"member":144489
 	},
 	{
 		"Datetime":"2021-04-16 00:00:00",
-		"revenue":6433756,
-		"profit":73012,
-		"member":132
+		"revenue":12558805,
+		"profit":8240197,
+		"member":144674
 	},
 	{
 		"Datetime":"2021-04-17 00:00:00",
-		"revenue":3723584,
-		"profit":71450,
-		"member":574
+		"revenue":12603125,
+		"profit":8309825,
+		"member":145488
 	},
 	{
 		"Datetime":"2021-04-18 00:00:00",
-		"revenue":5181525,
-		"profit":71460,
-		"member":295
+		"revenue":12620396,
+		"profit":8397420,
+		"member":146413
 	},
 	{
 		"Datetime":"2021-04-19 00:00:00",
-		"revenue":6514631,
-		"profit":70278,
-		"member":829
+		"revenue":12682954,
+		"profit":8440796,
+		"member":147087
 	},
 	{
 		"Datetime":"2021-04-20 00:00:00",
-		"revenue":9231544,
-		"profit":79618,
-		"member":657
+		"revenue":12686468,
+		"profit":8468829,
+		"member":147966
 	},
 	{
 		"Datetime":"2021-04-21 00:00:00",
-		"revenue":6050645,
-		"profit":90915,
-		"member":727
+		"revenue":12752645,
+		"profit":8531582,
+		"member":148730
 	},
 	{
 		"Datetime":"2021-04-22 00:00:00",
-		"revenue":6410496,
-		"profit":68282,
-		"member":794
+		"revenue":12784886,
+		"profit":8613443,
+		"member":149467
 	},
 	{
 		"Datetime":"2021-04-23 00:00:00",
-		"revenue":8276121,
-		"profit":75045,
-		"member":483
+		"revenue":12848316,
+		"profit":8686303,
+		"member":149390
 	},
 	{
 		"Datetime":"2021-04-24 00:00:00",
-		"revenue":6968372,
-		"profit":74657,
-		"member":679
+		"revenue":12897830,
+		"profit":8722278,
+		"member":149581
 	},
 	{
 		"Datetime":"2021-04-25 00:00:00",
-		"revenue":6704967,
-		"profit":77820,
-		"member":731
+		"revenue":12928859,
+		"profit":8748043,
+		"member":150532
 	},
 	{
 		"Datetime":"2021-04-26 00:00:00",
-		"revenue":5189198,
-		"profit":23630,
-		"member":644
+		"revenue":13018652,
+		"profit":8803617,
+		"member":150618
 	},
 	{
 		"Datetime":"2021-04-27 00:00:00",
-		"revenue":6810037,
-		"profit":11803,
-		"member":568
+		"revenue":13015055,
+		"profit":8885303,
+		"member":150604
 	},
 	{
 		"Datetime":"2021-04-28 00:00:00",
-		"revenue":7883598,
-		"profit":16950,
-		"member":665
+		"revenue":13104877,
+		"profit":8890786,
+		"member":150826
 	},
 	{
 		"Datetime":"2021-04-29 00:00:00",
-		"revenue":2566974,
-		"profit":92092,
-		"member":524
+		"revenue":13110236,
+		"profit":8969202,
+		"member":151576
 	},
 	{
 		"Datetime":"2021-04-30 00:00:00",
-		"revenue":7040689,
-		"profit":61583,
-		"member":132
+		"revenue":13178220,
+		"profit":9060632,
+		"member":151509
 	},
 	{
 		"Datetime":"2021-05-01 00:00:00",
-		"revenue":1580039,
-		"profit":23155,
-		"member":218
+		"revenue":13176634,
+		"profit":9108896,
+		"member":151803
 	},
 	{
 		"Datetime":"2021-05-02 00:00:00",
-		"revenue":1731765,
-		"profit":85026,
-		"member":209
+		"revenue":13241279,
+		"profit":9161424,
+		"member":152491
 	},
 	{
 		"Datetime":"2021-05-03 00:00:00",
-		"revenue":8951305,
-		"profit":13493,
-		"member":960
+		"revenue":13240446,
+		"profit":9197302,
+		"member":152457
 	},
 	{
 		"Datetime":"2021-05-04 00:00:00",
-		"revenue":9150581,
-		"profit":63893,
-		"member":709
+		"revenue":13260911,
+		"profit":9274828,
+		"member":153259
 	},
 	{
 		"Datetime":"2021-05-05 00:00:00",
-		"revenue":2133232,
-		"profit":18487,
-		"member":940
+		"revenue":13322743,
+		"profit":9321989,
+		"member":153920
 	},
 	{
 		"Datetime":"2021-05-06 00:00:00",
-		"revenue":8208423,
-		"profit":26935,
-		"member":203
+		"revenue":13389681,
+		"profit":9395265,
+		"member":153824
 	},
 	{
 		"Datetime":"2021-05-07 00:00:00",
-		"revenue":2919160,
-		"profit":25029,
-		"member":207
+		"revenue":13414037,
+		"profit":9409642,
+		"member":153826
 	},
 	{
 		"Datetime":"2021-05-08 00:00:00",
-		"revenue":2836949,
-		"profit":50593,
-		"member":196
+		"revenue":13485475,
+		"profit":9433964,
+		"member":154103
 	},
 	{
 		"Datetime":"2021-05-09 00:00:00",
-		"revenue":5020492,
-		"profit":14566,
-		"member":930
+		"revenue":13558042,
+		"profit":9489224,
+		"member":154730
 	},
 	{
 		"Datetime":"2021-05-10 00:00:00",
-		"revenue":9044640,
-		"profit":22179,
-		"member":953
+		"revenue":13641861,
+		"profit":9486161,
+		"member":155142
 	},
 	{
 		"Datetime":"2021-05-11 00:00:00",
-		"revenue":8521333,
-		"profit":74790,
-		"member":630
+		"revenue":13699350,
+		"profit":9500439,
+		"member":155144
 	},
 	{
 		"Datetime":"2021-05-12 00:00:00",
-		"revenue":2923985,
-		"profit":36096,
-		"member":352
+		"revenue":13732015,
+		"profit":9492011,
+		"member":155849
 	},
 	{
 		"Datetime":"2021-05-13 00:00:00",
-		"revenue":7945255,
-		"profit":74260,
-		"member":992
+		"revenue":13778591,
+		"profit":9590048,
+		"member":155900
 	},
 	{
 		"Datetime":"2021-05-14 00:00:00",
-		"revenue":6726955,
-		"profit":27154,
-		"member":319
+		"revenue":13851393,
+		"profit":9586046,
+		"member":156716
 	},
 	{
 		"Datetime":"2021-05-15 00:00:00",
-		"revenue":6635990,
-		"profit":93295,
-		"member":619
+		"revenue":13893986,
+		"profit":9596263,
+		"member":157063
 	},
 	{
 		"Datetime":"2021-05-16 00:00:00",
-		"revenue":9668646,
-		"profit":16121,
-		"member":420
+		"revenue":13909639,
+		"profit":9620870,
+		"member":157759
 	},
 	{
 		"Datetime":"2021-05-17 00:00:00",
-		"revenue":3378164,
-		"profit":32103,
-		"member":854
+		"revenue":13987312,
+		"profit":9667457,
+		"member":158572
 	},
 	{
 		"Datetime":"2021-05-18 00:00:00",
-		"revenue":7445505,
-		"profit":35957,
-		"member":368
+		"revenue":14014710,
+		"profit":9744481,
+		"member":159155
 	},
 	{
 		"Datetime":"2021-05-19 00:00:00",
-		"revenue":1967916,
-		"profit":62863,
-		"member":258
+		"revenue":14029079,
+		"profit":9831828,
+		"member":159334
 	},
 	{
 		"Datetime":"2021-05-20 00:00:00",
-		"revenue":5625825,
-		"profit":24671,
-		"member":803
+		"revenue":14030998,
+		"profit":9868895,
+		"member":159580
 	},
 	{
 		"Datetime":"2021-05-21 00:00:00",
-		"revenue":9960638,
-		"profit":46570,
-		"member":330
+		"revenue":14102151,
+		"profit":9927566,
+		"member":159590
 	},
 	{
 		"Datetime":"2021-05-22 00:00:00",
-		"revenue":5168392,
-		"profit":92540,
-		"member":867
+		"revenue":14169066,
+		"profit":9955072,
+		"member":160487
 	},
 	{
 		"Datetime":"2021-05-23 00:00:00",
-		"revenue":6369848,
-		"profit":83409,
-		"member":967
+		"revenue":14186610,
+		"profit":10047604,
+		"member":160772
 	},
 	{
 		"Datetime":"2021-05-24 00:00:00",
-		"revenue":9312205,
-		"profit":40299,
-		"member":586
+		"revenue":14230694,
+		"profit":10135617,
+		"member":161300
 	},
 	{
 		"Datetime":"2021-05-25 00:00:00",
-		"revenue":7523077,
-		"profit":48021,
-		"member":875
+		"revenue":14255542,
+		"profit":10155837,
+		"member":161800
 	},
 	{
 		"Datetime":"2021-05-26 00:00:00",
-		"revenue":3197138,
-		"profit":27342,
-		"member":343
+		"revenue":14355533,
+		"profit":10210231,
+		"member":162170
 	},
 	{
 		"Datetime":"2021-05-27 00:00:00",
-		"revenue":2722201,
-		"profit":49553,
-		"member":717
+		"revenue":14356835,
+		"profit":10253677,
+		"member":163115
 	},
 	{
 		"Datetime":"2021-05-28 00:00:00",
-		"revenue":8377792,
-		"profit":40669,
-		"member":396
+		"revenue":14383473,
+		"profit":10299247,
+		"member":163384
 	},
 	{
 		"Datetime":"2021-05-29 00:00:00",
-		"revenue":4679424,
-		"profit":23165,
-		"member":624
+		"revenue":14458865,
+		"profit":10338209,
+		"member":164097
 	},
 	{
 		"Datetime":"2021-05-30 00:00:00",
-		"revenue":4214027,
-		"profit":43645,
-		"member":527
+		"revenue":14527726,
+		"profit":10413850,
+		"member":164197
 	},
 	{
 		"Datetime":"2021-05-31 00:00:00",
-		"revenue":3807875,
-		"profit":99863,
-		"member":368
+		"revenue":14586590,
+		"profit":10420537,
+		"member":164453
 	},
 	{
 		"Datetime":"2021-06-01 00:00:00",
-		"revenue":5423401,
-		"profit":33934,
-		"member":125
+		"revenue":14660033,
+		"profit":10441299,
+		"member":164838
 	},
 	{
 		"Datetime":"2021-06-02 00:00:00",
-		"revenue":8013107,
-		"profit":86476,
-		"member":599
+		"revenue":14697341,
+		"profit":10479463,
+		"member":165177
 	},
 	{
 		"Datetime":"2021-06-03 00:00:00",
-		"revenue":5890384,
-		"profit":21118,
-		"member":567
+		"revenue":14788469,
+		"profit":10546921,
+		"member":165835
 	},
 	{
 		"Datetime":"2021-06-04 00:00:00",
-		"revenue":8804172,
-		"profit":52307,
-		"member":304
+		"revenue":14826472,
+		"profit":10622777,
+		"member":165990
 	},
 	{
 		"Datetime":"2021-06-05 00:00:00",
-		"revenue":7502257,
-		"profit":39953,
-		"member":384
+		"revenue":14851055,
+		"profit":10702967,
+		"member":166386
 	},
 	{
 		"Datetime":"2021-06-06 00:00:00",
-		"revenue":4678711,
-		"profit":34292,
-		"member":440
+		"revenue":14847320,
+		"profit":10728436,
+		"member":166771
 	},
 	{
 		"Datetime":"2021-06-07 00:00:00",
-		"revenue":4856785,
-		"profit":63972,
-		"member":722
+		"revenue":14933359,
+		"profit":10738931,
+		"member":166912
 	},
 	{
 		"Datetime":"2021-06-08 00:00:00",
-		"revenue":3951478,
-		"profit":21056,
-		"member":838
+		"revenue":14935767,
+		"profit":10814743,
+		"member":167490
 	},
 	{
 		"Datetime":"2021-06-09 00:00:00",
-		"revenue":7521591,
-		"profit":99572,
-		"member":568
+		"revenue":14934787,
+		"profit":10909807,
+		"member":168025
 	},
 	{
 		"Datetime":"2021-06-10 00:00:00",
-		"revenue":1853101,
-		"profit":77373,
-		"member":639
+		"revenue":14933029,
+		"profit":10970462,
+		"member":168096
 	},
 	{
 		"Datetime":"2021-06-11 00:00:00",
-		"revenue":9123319,
-		"profit":41972,
-		"member":459
+		"revenue":14928737,
+		"profit":11011234,
+		"member":169062
 	},
 	{
 		"Datetime":"2021-06-12 00:00:00",
-		"revenue":9362387,
-		"profit":50886,
-		"member":677
+		"revenue":15021771,
+		"profit":11104606,
+		"member":169194
 	},
 	{
 		"Datetime":"2021-06-13 00:00:00",
-		"revenue":6390863,
-		"profit":66659,
-		"member":129
+		"revenue":15045742,
+		"profit":11097693,
+		"member":169153
 	},
 	{
 		"Datetime":"2021-06-14 00:00:00",
-		"revenue":1562324,
-		"profit":83812,
-		"member":792
+		"revenue":15082573,
+		"profit":11101604,
+		"member":169409
 	},
 	{
 		"Datetime":"2021-06-15 00:00:00",
-		"revenue":9841402,
-		"profit":66206,
-		"member":533
+		"revenue":15168435,
+		"profit":11201004,
+		"member":170383
 	},
 	{
 		"Datetime":"2021-06-16 00:00:00",
-		"revenue":3972121,
-		"profit":95098,
-		"member":602
+		"revenue":15250200,
+		"profit":11244931,
+		"member":170551
 	},
 	{
 		"Datetime":"2021-06-17 00:00:00",
-		"revenue":7307465,
-		"profit":87528,
-		"member":436
+		"revenue":15306498,
+		"profit":11255095,
+		"member":171315
 	},
 	{
 		"Datetime":"2021-06-18 00:00:00",
-		"revenue":7684058,
-		"profit":93412,
-		"member":721
+		"revenue":15394878,
+		"profit":11335945,
+		"member":171473
 	},
 	{
 		"Datetime":"2021-06-19 00:00:00",
-		"revenue":8043927,
-		"profit":84164,
-		"member":828
+		"revenue":15449942,
+		"profit":11411727,
+		"member":172081
 	},
 	{
 		"Datetime":"2021-06-20 00:00:00",
-		"revenue":7027225,
-		"profit":36323,
-		"member":235
+		"revenue":15487143,
+		"profit":11445313,
+		"member":172022
 	},
 	{
 		"Datetime":"2021-06-21 00:00:00",
-		"revenue":9056744,
-		"profit":17539,
-		"member":466
+		"revenue":15524293,
+		"profit":11451224,
+		"member":172858
 	},
 	{
 		"Datetime":"2021-06-22 00:00:00",
-		"revenue":7266977,
-		"profit":73086,
-		"member":1000
+		"revenue":15585963,
+		"profit":11499743,
+		"member":173628
 	},
 	{
 		"Datetime":"2021-06-23 00:00:00",
-		"revenue":4392753,
-		"profit":45193,
-		"member":563
+		"revenue":15601607,
+		"profit":11534327,
+		"member":173901
 	},
 	{
 		"Datetime":"2021-06-24 00:00:00",
-		"revenue":1054955,
-		"profit":51737,
-		"member":422
+		"revenue":15591954,
+		"profit":11607752,
+		"member":174207
 	},
 	{
 		"Datetime":"2021-06-25 00:00:00",
-		"revenue":2553199,
-		"profit":82947,
-		"member":436
+		"revenue":15646858,
+		"profit":11667500,
+		"member":174807
 	},
 	{
 		"Datetime":"2021-06-26 00:00:00",
-		"revenue":3436473,
-		"profit":61800,
-		"member":845
+		"revenue":15718188,
+		"profit":11692492,
+		"member":175079
 	},
 	{
 		"Datetime":"2021-06-27 00:00:00",
-		"revenue":2646951,
-		"profit":61901,
-		"member":707
+		"revenue":15720421,
+		"profit":11703322,
+		"member":175501
 	},
 	{
 		"Datetime":"2021-06-28 00:00:00",
-		"revenue":6584089,
-		"profit":45542,
-		"member":801
+		"revenue":15776156,
+		"profit":11741695,
+		"member":175727
 	},
 	{
 		"Datetime":"2021-06-29 00:00:00",
-		"revenue":9745669,
-		"profit":81675,
-		"member":732
+		"revenue":15799630,
+		"profit":11779043,
+		"member":175659
 	},
 	{
 		"Datetime":"2021-06-30 00:00:00",
-		"revenue":2248269,
-		"profit":81192,
-		"member":639
+		"revenue":15854702,
+		"profit":11786546,
+		"member":176453
 	},
 	{
 		"Datetime":"2021-07-01 00:00:00",
-		"revenue":1596833,
-		"profit":37309,
-		"member":577
+		"revenue":15941140,
+		"profit":11777599,
+		"member":177319
 	},
 	{
 		"Datetime":"2021-07-02 00:00:00",
-		"revenue":5552151,
-		"profit":49983,
-		"member":569
+		"revenue":15995003,
+		"profit":11864908,
+		"member":177923
 	},
 	{
 		"Datetime":"2021-07-03 00:00:00",
-		"revenue":1220141,
-		"profit":42333,
-		"member":648
+		"revenue":16025100,
+		"profit":11917629,
+		"member":178300
 	},
 	{
 		"Datetime":"2021-07-04 00:00:00",
-		"revenue":9173176,
-		"profit":67882,
-		"member":332
+		"revenue":16097170,
+		"profit":11973130,
+		"member":179115
 	},
 	{
 		"Datetime":"2021-07-05 00:00:00",
-		"revenue":3822830,
-		"profit":64599,
-		"member":820
+		"revenue":16106983,
+		"profit":12003696,
+		"member":179510
 	},
 	{
 		"Datetime":"2021-07-06 00:00:00",
-		"revenue":7864433,
-		"profit":98861,
-		"member":566
+		"revenue":16112180,
+		"profit":12058939,
+		"member":180015
 	},
 	{
 		"Datetime":"2021-07-07 00:00:00",
-		"revenue":2273399,
-		"profit":55927,
-		"member":159
+		"revenue":16181081,
+		"profit":12133987,
+		"member":179994
 	},
 	{
 		"Datetime":"2021-07-08 00:00:00",
-		"revenue":6516405,
-		"profit":71049,
-		"member":304
+		"revenue":16224392,
+		"profit":12131826,
+		"member":180661
 	},
 	{
 		"Datetime":"2021-07-09 00:00:00",
-		"revenue":1133736,
-		"profit":92257,
-		"member":917
+		"revenue":16318975,
+		"profit":12221638,
+		"member":180588
 	},
 	{
 		"Datetime":"2021-07-10 00:00:00",
-		"revenue":7288853,
-		"profit":26249,
-		"member":935
+		"revenue":16330006,
+		"profit":12235750,
+		"member":181126
 	},
 	{
 		"Datetime":"2021-07-11 00:00:00",
-		"revenue":7340886,
-		"profit":68421,
-		"member":413
+		"revenue":16426964,
+		"profit":12302508,
+		"member":181546
 	},
 	{
 		"Datetime":"2021-07-12 00:00:00",
-		"revenue":1312323,
-		"profit":96028,
-		"member":537
+		"revenue":16478746,
+		"profit":12328931,
+		"member":182077
 	},
 	{
 		"Datetime":"2021-07-13 00:00:00",
-		"revenue":8788308,
-		"profit":62341,
-		"member":355
+		"revenue":16563889,
+		"profit":12357887,
+		"member":182711
 	},
 	{
 		"Datetime":"2021-07-14 00:00:00",
-		"revenue":4635386,
-		"profit":61031,
-		"member":787
+		"revenue":16618561,
+		"profit":12371358,
+		"member":183107
 	},
 	{
 		"Datetime":"2021-07-15 00:00:00",
-		"revenue":9830911,
-		"profit":52765,
-		"member":175
+		"revenue":16674121,
+		"profit":12422204,
+		"member":183897
 	},
 	{
 		"Datetime":"2021-07-16 00:00:00",
-		"revenue":3862943,
-		"profit":63788,
-		"member":207
+		"revenue":16704280,
+		"profit":12498509,
+		"member":184273
 	},
 	{
 		"Datetime":"2021-07-17 00:00:00",
-		"revenue":6331364,
-		"profit":68624,
-		"member":915
+		"revenue":16775135,
+		"profit":12570974,
+		"member":184755
 	},
 	{
 		"Datetime":"2021-07-18 00:00:00",
-		"revenue":2909113,
-		"profit":19894,
-		"member":791
+		"revenue":16784970,
+		"profit":12603092,
+		"member":184807
 	},
 	{
 		"Datetime":"2021-07-19 00:00:00",
-		"revenue":1143623,
-		"profit":40299,
-		"member":713
+		"revenue":16842428,
+		"profit":12612789,
+		"member":184897
 	},
 	{
 		"Datetime":"2021-07-20 00:00:00",
-		"revenue":1454487,
-		"profit":39625,
-		"member":155
+		"revenue":16905106,
+		"profit":12654111,
+		"member":184911
 	},
 	{
 		"Datetime":"2021-07-21 00:00:00",
-		"revenue":6607772,
-		"profit":64055,
-		"member":471
+		"revenue":16980246,
+		"profit":12731281,
+		"member":185748
 	},
 	{
 		"Datetime":"2021-07-22 00:00:00",
-		"revenue":2154638,
-		"profit":10802,
-		"member":777
+		"revenue":16976700,
+		"profit":12746057,
+		"member":185651
 	},
 	{
 		"Datetime":"2021-07-23 00:00:00",
-		"revenue":3492421,
-		"profit":93621,
-		"member":623
+		"revenue":17009799,
+		"profit":12797050,
+		"member":186601
 	},
 	{
 		"Datetime":"2021-07-24 00:00:00",
-		"revenue":3467999,
-		"profit":35904,
-		"member":188
+		"revenue":17020549,
+		"profit":12809865,
+		"member":187047
 	},
 	{
 		"Datetime":"2021-07-25 00:00:00",
-		"revenue":3436437,
-		"profit":12314,
-		"member":174
+		"revenue":17073150,
+		"profit":12855210,
+		"member":187613
 	},
 	{
 		"Datetime":"2021-07-26 00:00:00",
-		"revenue":6579240,
-		"profit":58072,
-		"member":901
+		"revenue":17103499,
+		"profit":12920316,
+		"member":187704
 	},
 	{
 		"Datetime":"2021-07-27 00:00:00",
-		"revenue":9819443,
-		"profit":34808,
-		"member":294
+		"revenue":17180828,
+		"profit":12925527,
+		"member":188305
 	},
 	{
 		"Datetime":"2021-07-28 00:00:00",
-		"revenue":2608661,
-		"profit":50390,
-		"member":908
+		"revenue":17212025,
+		"profit":12936205,
+		"member":188612
 	},
 	{
 		"Datetime":"2021-07-29 00:00:00",
-		"revenue":7810944,
-		"profit":44571,
-		"member":994
+		"revenue":17303371,
+		"profit":12929005,
+		"member":188882
 	},
 	{
 		"Datetime":"2021-07-30 00:00:00",
-		"revenue":1574207,
-		"profit":16850,
-		"member":937
+		"revenue":17378259,
+		"profit":12934713,
+		"member":189696
 	},
 	{
 		"Datetime":"2021-07-31 00:00:00",
-		"revenue":6239591,
-		"profit":83961,
-		"member":477
+		"revenue":17459052,
+		"profit":12979664,
+		"member":189897
 	},
 	{
 		"Datetime":"2021-08-01 00:00:00",
-		"revenue":2650252,
-		"profit":71217,
-		"member":108
+		"revenue":17452379,
+		"profit":13038185,
+		"member":190421
 	},
 	{
 		"Datetime":"2021-08-02 00:00:00",
-		"revenue":9307453,
-		"profit":22162,
-		"member":551
+		"revenue":17511629,
+		"profit":13084977,
+		"member":190953
 	},
 	{
 		"Datetime":"2021-08-03 00:00:00",
-		"revenue":4143823,
-		"profit":76467,
-		"member":982
+		"revenue":17607208,
+		"profit":13166443,
+		"member":190978
 	},
 	{
 		"Datetime":"2021-08-04 00:00:00",
-		"revenue":8779121,
-		"profit":15589,
-		"member":302
+		"revenue":17600678,
+		"profit":13204131,
+		"member":190960
 	},
 	{
 		"Datetime":"2021-08-05 00:00:00",
-		"revenue":1822471,
-		"profit":57984,
-		"member":235
+		"revenue":17637471,
+		"profit":13222331,
+		"member":191518
 	},
 	{
 		"Datetime":"2021-08-06 00:00:00",
-		"revenue":6875608,
-		"profit":21865,
-		"member":797
+		"revenue":17664686,
+		"profit":13216158,
+		"member":191422
 	},
 	{
 		"Datetime":"2021-08-07 00:00:00",
-		"revenue":1637520,
-		"profit":89733,
-		"member":780
+		"revenue":17724614,
+		"profit":13217018,
+		"member":191439
 	},
 	{
 		"Datetime":"2021-08-08 00:00:00",
-		"revenue":4163646,
-		"profit":61334,
-		"member":904
+		"revenue":17760369,
+		"profit":13250136,
+		"member":191714
 	},
 	{
 		"Datetime":"2021-08-09 00:00:00",
-		"revenue":5265123,
-		"profit":70009,
-		"member":797
+		"revenue":17789667,
+		"profit":13277147,
+		"member":192577
 	},
 	{
 		"Datetime":"2021-08-10 00:00:00",
-		"revenue":5064412,
-		"profit":13337,
-		"member":541
+		"revenue":17816386,
+		"profit":13323849,
+		"member":192708
 	},
 	{
 		"Datetime":"2021-08-11 00:00:00",
-		"revenue":4044069,
-		"profit":33854,
-		"member":169
+		"revenue":17915155,
+		"profit":13390694,
+		"member":193290
 	},
 	{
 		"Datetime":"2021-08-12 00:00:00",
-		"revenue":6087586,
-		"profit":98993,
-		"member":279
+		"revenue":17937127,
+		"profit":13429827,
+		"member":193497
 	},
 	{
 		"Datetime":"2021-08-13 00:00:00",
-		"revenue":4848613,
-		"profit":72132,
-		"member":700
+		"revenue":18034981,
+		"profit":13470963,
+		"member":193971
 	},
 	{
 		"Datetime":"2021-08-14 00:00:00",
-		"revenue":4909156,
-		"profit":91289,
-		"member":694
+		"revenue":18048808,
+		"profit":13470477,
+		"member":194761
 	},
 	{
 		"Datetime":"2021-08-15 00:00:00",
-		"revenue":9715711,
-		"profit":46943,
-		"member":653
+		"revenue":18090534,
+		"profit":13535731,
+		"member":195639
 	},
 	{
 		"Datetime":"2021-08-16 00:00:00",
-		"revenue":1816414,
-		"profit":60525,
-		"member":935
+		"revenue":18122188,
+		"profit":13625852,
+		"member":196069
 	},
 	{
 		"Datetime":"2021-08-17 00:00:00",
-		"revenue":9708614,
-		"profit":69336,
-		"member":432
+		"revenue":18145951,
+		"profit":13715391,
+		"member":196470
 	},
 	{
 		"Datetime":"2021-08-18 00:00:00",
-		"revenue":3132005,
-		"profit":63923,
-		"member":533
+		"revenue":18240348,
+		"profit":13772269,
+		"member":197118
 	},
 	{
 		"Datetime":"2021-08-19 00:00:00",
-		"revenue":1950843,
-		"profit":70705,
-		"member":121
+		"revenue":18251319,
+		"profit":13806465,
+		"member":197908
 	},
 	{
 		"Datetime":"2021-08-20 00:00:00",
-		"revenue":4505923,
-		"profit":80260,
-		"member":531
+		"revenue":18340235,
+		"profit":13815977,
+		"member":198502
 	},
 	{
 		"Datetime":"2021-08-21 00:00:00",
-		"revenue":4653647,
-		"profit":90165,
-		"member":382
+		"revenue":18381689,
+		"profit":13864714,
+		"member":198953
 	},
 	{
 		"Datetime":"2021-08-22 00:00:00",
-		"revenue":3416580,
-		"profit":59831,
-		"member":521
+		"revenue":18413329,
+		"profit":13906524,
+		"member":199766
 	},
 	{
 		"Datetime":"2021-08-23 00:00:00",
-		"revenue":5792933,
-		"profit":71054,
-		"member":902
+		"revenue":18483130,
+		"profit":13940275,
+		"member":200137
 	},
 	{
 		"Datetime":"2021-08-24 00:00:00",
-		"revenue":1258080,
-		"profit":30291,
-		"member":116
+		"revenue":18536330,
+		"profit":13943745,
+		"member":200759
 	},
 	{
 		"Datetime":"2021-08-25 00:00:00",
-		"revenue":5217834,
-		"profit":72249,
-		"member":834
+		"revenue":18570808,
+		"profit":13966985,
+		"member":201045
 	},
 	{
 		"Datetime":"2021-08-26 00:00:00",
-		"revenue":5416924,
-		"profit":42662,
-		"member":685
+		"revenue":18566350,
+		"profit":13989342,
+		"member":201631
 	},
 	{
 		"Datetime":"2021-08-27 00:00:00",
-		"revenue":5996695,
-		"profit":76695,
-		"member":704
+		"revenue":18567794,
+		"profit":14086249,
+		"member":201997
 	},
 	{
 		"Datetime":"2021-08-28 00:00:00",
-		"revenue":7778457,
-		"profit":96275,
-		"member":990
+		"revenue":18659085,
+		"profit":14096973,
+		"member":202350
 	},
 	{
 		"Datetime":"2021-08-29 00:00:00",
-		"revenue":3122884,
-		"profit":72890,
-		"member":885
+		"revenue":18733235,
+		"profit":14135953,
+		"member":203206
 	},
 	{
 		"Datetime":"2021-08-30 00:00:00",
-		"revenue":5157816,
-		"profit":14137,
-		"member":202
+		"revenue":18736804,
+		"profit":14188602,
+		"member":203882
 	},
 	{
 		"Datetime":"2021-08-31 00:00:00",
-		"revenue":1841122,
-		"profit":65173,
-		"member":661
+		"revenue":18732237,
+		"profit":14187604,
+		"member":204452
 	},
 	{
 		"Datetime":"2021-09-01 00:00:00",
-		"revenue":1264189,
-		"profit":30949,
-		"member":953
+		"revenue":18744413,
+		"profit":14245163,
+		"member":204392
 	},
 	{
 		"Datetime":"2021-09-02 00:00:00",
-		"revenue":1367169,
-		"profit":83482,
-		"member":384
+		"revenue":18791966,
+		"profit":14250114,
+		"member":204336
 	},
 	{
 		"Datetime":"2021-09-03 00:00:00",
-		"revenue":6143590,
-		"profit":73789,
-		"member":478
+		"revenue":18878171,
+		"profit":14279861,
+		"member":204408
 	},
 	{
 		"Datetime":"2021-09-04 00:00:00",
-		"revenue":2261967,
-		"profit":31283,
-		"member":339
+		"revenue":18962350,
+		"profit":14370305,
+		"member":204654
 	},
 	{
 		"Datetime":"2021-09-05 00:00:00",
-		"revenue":6653112,
-		"profit":61790,
-		"member":360
+		"revenue":19010400,
+		"profit":14392012,
+		"member":204798
 	},
 	{
 		"Datetime":"2021-09-06 00:00:00",
-		"revenue":2900022,
-		"profit":84273,
-		"member":689
+		"revenue":19070868,
+		"profit":14424115,
+		"member":205101
 	},
 	{
 		"Datetime":"2021-09-07 00:00:00",
-		"revenue":7625436,
-		"profit":55226,
-		"member":603
+		"revenue":19077400,
+		"profit":14514024,
+		"member":205812
 	},
 	{
 		"Datetime":"2021-09-08 00:00:00",
-		"revenue":5615807,
-		"profit":63201,
-		"member":568
+		"revenue":19147927,
+		"profit":14561396,
+		"member":206338
 	},
 	{
 		"Datetime":"2021-09-09 00:00:00",
-		"revenue":8733267,
-		"profit":26374,
-		"member":879
+		"revenue":19218693,
+		"profit":14656390,
+		"member":206422
 	},
 	{
 		"Datetime":"2021-09-10 00:00:00",
-		"revenue":1723557,
-		"profit":51990,
-		"member":809
+		"revenue":19288812,
+		"profit":14651664,
+		"member":206389
 	},
 	{
 		"Datetime":"2021-09-11 00:00:00",
-		"revenue":7369408,
-		"profit":45823,
-		"member":612
+		"revenue":19379362,
+		"profit":14671130,
+		"member":206594
 	},
 	{
 		"Datetime":"2021-09-12 00:00:00",
-		"revenue":3178370,
-		"profit":77155,
-		"member":947
+		"revenue":19409906,
+		"profit":14703713,
+		"member":207530
 	},
 	{
 		"Datetime":"2021-09-13 00:00:00",
-		"revenue":1003471,
-		"profit":78203,
-		"member":749
+		"revenue":19460851,
+		"profit":14768291,
+		"member":207535
 	},
 	{
 		"Datetime":"2021-09-14 00:00:00",
-		"revenue":5105348,
-		"profit":92620,
-		"member":811
+		"revenue":19484337,
+		"profit":14846681,
+		"member":207495
 	},
 	{
 		"Datetime":"2021-09-15 00:00:00",
-		"revenue":3292554,
-		"profit":63121,
-		"member":339
+		"revenue":19498916,
+		"profit":14944702,
+		"member":208401
 	},
 	{
 		"Datetime":"2021-09-16 00:00:00",
-		"revenue":2512032,
-		"profit":51346,
-		"member":615
+		"revenue":19571005,
+		"profit":15041940,
+		"member":209357
 	},
 	{
 		"Datetime":"2021-09-17 00:00:00",
-		"revenue":1573370,
-		"profit":59713,
-		"member":103
+		"revenue":19659950,
+		"profit":15094564,
+		"member":210247
 	},
 	{
 		"Datetime":"2021-09-18 00:00:00",
-		"revenue":4509898,
-		"profit":59409,
-		"member":577
+		"revenue":19654280,
+		"profit":15108283,
+		"member":210254
 	},
 	{
 		"Datetime":"2021-09-19 00:00:00",
-		"revenue":6767807,
-		"profit":51329,
-		"member":992
+		"revenue":19674773,
+		"profit":15181036,
+		"member":210249
 	},
 	{
 		"Datetime":"2021-09-20 00:00:00",
-		"revenue":2664772,
-		"profit":89092,
-		"member":707
+		"revenue":19752987,
+		"profit":15190048,
+		"member":211098
 	},
 	{
 		"Datetime":"2021-09-21 00:00:00",
-		"revenue":1133092,
-		"profit":75823,
-		"member":196
+		"revenue":19744489,
+		"profit":15223726,
+		"member":211913
 	},
 	{
 		"Datetime":"2021-09-22 00:00:00",
-		"revenue":4564778,
-		"profit":47873,
-		"member":107
+		"revenue":19768273,
+		"profit":15269062,
+		"member":212073
 	},
 	{
 		"Datetime":"2021-09-23 00:00:00",
-		"revenue":9020812,
-		"profit":30861,
-		"member":361
+		"revenue":19773373,
+		"profit":15294399,
+		"member":212027
 	},
 	{
 		"Datetime":"2021-09-24 00:00:00",
-		"revenue":4713204,
-		"profit":63874,
-		"member":786
+		"revenue":19780529,
+		"profit":15361435,
+		"member":212526
 	},
 	{
 		"Datetime":"2021-09-25 00:00:00",
-		"revenue":7983178,
-		"profit":27977,
-		"member":200
+		"revenue":19775898,
+		"profit":15373455,
+		"member":212611
 	},
 	{
 		"Datetime":"2021-09-26 00:00:00",
-		"revenue":2221205,
-		"profit":95139,
-		"member":376
+		"revenue":19827389,
+		"profit":15455645,
+		"member":212753
 	},
 	{
 		"Datetime":"2021-09-27 00:00:00",
-		"revenue":1458297,
-		"profit":27160,
-		"member":530
+		"revenue":19920780,
+		"profit":15532468,
+		"member":213391
 	},
 	{
 		"Datetime":"2021-09-28 00:00:00",
-		"revenue":2593242,
-		"profit":21041,
-		"member":796
+		"revenue":20001310,
+		"profit":15561567,
+		"member":213691
 	},
 	{
 		"Datetime":"2021-09-29 00:00:00",
-		"revenue":2885168,
-		"profit":88612,
-		"member":139
+		"revenue":20087808,
+		"profit":15576110,
+		"member":214573
 	},
 	{
 		"Datetime":"2021-09-30 00:00:00",
-		"revenue":3862742,
-		"profit":83524,
-		"member":720
+		"revenue":20155739,
+		"profit":15655725,
+		"member":215211
 	},
 	{
 		"Datetime":"2021-10-01 00:00:00",
-		"revenue":7414217,
-		"profit":65447,
-		"member":119
+		"revenue":20232709,
+		"profit":15686602,
+		"member":215112
 	},
 	{
 		"Datetime":"2021-10-02 00:00:00",
-		"revenue":6998794,
-		"profit":30991,
-		"member":302
+		"revenue":20317938,
+		"profit":15764736,
+		"member":215178
 	},
 	{
 		"Datetime":"2021-10-03 00:00:00",
-		"revenue":1513910,
-		"profit":83897,
-		"member":257
+		"revenue":20347440,
+		"profit":15790830,
+		"member":215284
 	},
 	{
 		"Datetime":"2021-10-04 00:00:00",
-		"revenue":3232474,
-		"profit":89640,
-		"member":359
+		"revenue":20416227,
+		"profit":15785152,
+		"member":215421
 	},
 	{
 		"Datetime":"2021-10-05 00:00:00",
-		"revenue":6960726,
-		"profit":20586,
-		"member":511
+		"revenue":20452415,
+		"profit":15842232,
+		"member":215907
 	},
 	{
 		"Datetime":"2021-10-06 00:00:00",
-		"revenue":1554633,
-		"profit":52696,
-		"member":598
+		"revenue":20458763,
+		"profit":15904360,
+		"member":216157
 	},
 	{
 		"Datetime":"2021-10-07 00:00:00",
-		"revenue":5012778,
-		"profit":78205,
-		"member":318
+		"revenue":20553574,
+		"profit":15906793,
+		"member":216792
 	},
 	{
 		"Datetime":"2021-10-08 00:00:00",
-		"revenue":9892001,
-		"profit":34274,
-		"member":873
+		"revenue":20600729,
+		"profit":15901008,
+		"member":217364
 	},
 	{
 		"Datetime":"2021-10-09 00:00:00",
-		"revenue":7599355,
-		"profit":16028,
-		"member":433
+		"revenue":20672908,
+		"profit":15964223,
+		"member":217616
 	}
 ]
