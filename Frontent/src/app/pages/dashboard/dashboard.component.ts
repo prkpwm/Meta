@@ -207,21 +207,17 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   async loadData(){
-    await this._http.get('http://localhost:5001/getSimpleData')
-    .subscribe(res=>{
-      console.log(res)
-      this.Today_ORDER = res['Today_ORDER']
-      this.Total_ORDER = res['Total_ORDER']
-      this.Today_REVENUE = res['Today_REVENUE']
-      this.Total_REVENUE = res['Total_REVENUE']
-      this.Today_PROFIT = res['Today_PROFIT']
-      this.Total_PROFIT = res['Total_PROFIT']
-      this.Today_MEMBERS = res['Today_MEMBERS']
-      this.Total_MEMBERS = res['Total_MEMBERS']
+    let res =  await this._http.get('http://localhost:5001/getSimpleData').toPromise()
+    console.log(res)
+    this.Today_ORDER = res['Today_ORDER']
+    this.Total_ORDER = res['Total_ORDER']
+    this.Today_REVENUE = res['Today_REVENUE']
+    this.Total_REVENUE = res['Total_REVENUE']
+    this.Today_PROFIT = res['Today_PROFIT']
+    this.Total_PROFIT = res['Total_PROFIT']
+    this.Today_MEMBERS = res['Today_MEMBERS']
+    this.Total_MEMBERS = res['Total_MEMBERS']
 
-    })
-    
-    
   }
 
   searchCountries(key) {
@@ -284,24 +280,33 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     if (this.lineChart) {
       this.lineChart.dispose();
     }
-    this.TimeLineData = await this.loadTimeLine()
-    console.log(this.TimeLineData)
-    Object.keys(this.timeLine).forEach(key => {
+    this.TimeLineData =  await this._http.get('http://localhost:5001/getTimeLineData').toPromise()
+    // console.log(this.TimeLineData)
+    // Object.keys(this.timeLine).forEach(key => {
+    //   this.caseData.push({
+    //     date: new Date(key),
+    //     Revenue: this.timeLine[key].cases,
+    //     Profit: this.timeLine[key].recovered,
+    //     Member: this.timeLine[key].deaths
+    //   });
+    // });
+    // console.log(this.caseData)
+    for(let i =0;i<50;i++){
       this.caseData.push({
-        date: new Date(key),
-        Revenue: this.timeLine[key].cases,
-        Profit: this.timeLine[key].recovered,
-        Member: this.timeLine[key].deaths
+        date: new Date(this.TimeLineData[i]['Datetime']),
+        Revenue: this.TimeLineData[i]['revenue'],
+        Profit: this.TimeLineData[i]['profit'],
+        Member: this.TimeLineData[i]['member']
       });
-    });
-
+    }
+    console.log(this.caseData)
     // this.caseData.push({
     //   date: new Date().getTime(),
     //   cases: this.totalCases,
     //   recoveries: this.totalRecoveries,
     //   deaths: this.totalDeaths
     // });
-    console.log(this.caseData)
+    // console.log(this.caseData)
 
     let chart = am4core.create("lineChart", am4charts.XYChart);
     chart.numberFormatter.numberFormat = "#a";
