@@ -291,7 +291,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     //   });
     // });
     // console.log(this.caseData)
-    for(let i =0;i<50;i++){
+    for(let i =0;i<1000;i++){
       this.caseData.push({
         date: new Date(this.TimeLineData[i]['Datetime']),
         Revenue: this.TimeLineData[i]['revenue'],

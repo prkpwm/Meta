@@ -67,7 +67,7 @@ app.get("/getSimpleData", async function (request, response) {
 
 
 app.get("/getTimeLineData", async function (request, response) {
-  let history = await axios.get(`https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/ALL.json`).then(async res => {
+  let history = await axios.get(`https://raw.githubusercontent.com/prkpwm/Meta/main/SERVER/Data/jsonFile.json`).then(async res => {
     return res.data
   })
   response.send(
