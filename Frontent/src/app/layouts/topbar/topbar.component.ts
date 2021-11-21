@@ -1,11 +1,13 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+
+
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent implements OnInit {
-  constructor() { }
+  constructor( ) { }
 
   deferredPrompt: any;
   showButton = false;
@@ -13,7 +15,15 @@ export class TopbarComponent implements OnInit {
   title:string;
 
   ngOnInit(){
-    this.title = localStorage.getItem("title")
+    try {
+      this.title = window.location.href.split("/")[3]
+      if(this.title == '')
+        this.title = "Dashboard"
+
+    }
+    catch(err) {
+      console.log(err)
+    }
   }
 
   onClickPage(name:string){

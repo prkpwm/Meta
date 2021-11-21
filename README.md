@@ -31,8 +31,13 @@ npm install
 node server.js
 ```
 
-## Author
+## Database MONGODB
+Meta  ##Database name
+- countries  ##Database collection
+- sumOfDay ##Database  collection
 
+
+## Author
 👤 **Pakpoom Srisen**
 
 

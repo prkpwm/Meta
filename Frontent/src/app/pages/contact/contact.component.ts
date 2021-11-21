@@ -31,9 +31,7 @@ export class contactComponent implements OnInit {
 
   title:string;
   
-  ngOnInit(){
-    localStorage.setItem("title","About")
-  }
+
 
 
 }

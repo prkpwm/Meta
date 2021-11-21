@@ -5,3 +5,7 @@
   min-height: 270px;
   transition: all 0.2s;
 }
+
+div {
+  overflow: hidden; /* Hide scrollbars */
+}

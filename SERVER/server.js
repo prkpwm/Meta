@@ -7,7 +7,7 @@ var MongoClient = require('mongodb').MongoClient;
 let src = "localhost"
 var url = `mongodb://${src}:27017/`;
 console.log(url)
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(url, function (err, db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
@@ -15,6 +15,55 @@ MongoClient.connect(url, function(err, db) {
 
 app.use(cors());
 
+ getLastDateInfo = async() => {
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    let dbo = db.db("meta");
+    let today = new Date();
+    let start_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T00:00:00.000Z";
+    let end_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T23:59:59.999Z";
+    const pipeline = { "Datetime": { "$gte": new Date(start_date), "$lt": new Date(end_date) } }
+    dbo.collection("sumOfDay").find(pipeline).toArray(function (err, result) {
+      if (err) throw err;
+      db.close();
+      return result[0]
+    });
+  });
+}
+
+generateTodayDataOnStart = async() => {
+  let today = new Date();
+  let formatDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + "T00:00:00.000Z";
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    let dbo = db.db("meta");
+    let today = new Date();
+    let start_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T00:00:00.000Z";
+    let end_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T23:59:59.999Z";
+    const pipeline = { "Datetime": { "$gte": new Date(start_date), "$lt": new Date(end_date) } }
+    dbo.collection("sumOfDay").find(pipeline).toArray(function (err, result) {
+      if (err) throw err;
+      db.close();
+      console.log(result)
+      let v1 = result[0]['revenue']+Math.floor(Math.random() * (100000000 - 10000000 + 1) - (10000000)) 
+      let v2 = result[0]['profit']+Math.floor(Math.random() * (10000000 - 1000000 + 1) - (1000000))
+      let v3 = result[0]['member']+Math.floor(Math.random() * (1000000 - 100000 + 1) - (100000))
+      console.log(v1,v2,v3)
+      var myObj = { Datetime: new Date(), revenue: v1, profit: v2, member: v3 };
+      MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("meta");
+        dbo.collection("sumOfDay").insertOne(myObj, function (err, result) {
+          if (err) throw err;
+          console.log("1 document inserted")
+          db.close();
+        });
+      });
+    });
+  });
+}
+
+generateTodayDataOnStart()
 
 app.get("/", async function (request, response) {
   console.log("hello");
@@ -44,10 +93,10 @@ app.get("/getTimeLineData", async function (request, response) {
 
 
 app.get("/getTimeLine", async function (request, response) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function (err, db) {
     if (err) throw err;
-    var dbo = db.db("meta");
-    dbo.collection("sumOfDay").find({}).toArray(function(err, result) {
+    let dbo = db.db("meta");
+    dbo.collection("sumOfDay").find({}).toArray(function (err, result) {
       if (err) throw err;
       response.send(
         result
@@ -58,10 +107,10 @@ app.get("/getTimeLine", async function (request, response) {
 });
 
 app.get("/getCountries", async function (request, response) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function (err, db) {
     if (err) throw err;
-    var dbo = db.db("meta");
-    dbo.collection("countries").find({}).toArray(function(err, result) {
+    let dbo = db.db("meta");
+    dbo.collection("countries").find({}).toArray(function (err, result) {
       if (err) throw err;
       response.send(
         result
@@ -75,15 +124,15 @@ app.get("/getCountries", async function (request, response) {
 
 
 app.get("/getSumByName/:name", async function (request, response) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function (err, db) {
     if (err) throw err;
-    var dbo = db.db("meta");
-    let namimg = '$'+request.params.name
+    let dbo = db.db("meta");
+    let namimg = '$' + request.params.name
     // console.log(namimg)
     const pipeline = [
-      { $group: { "_id": 1, "summary": {$sum: namimg} } }
+      { $group: { "_id": 1, "summary": { $sum: namimg } } }
     ];
-    dbo.collection("countries").aggregate(pipeline).toArray(function(err, result) {
+    dbo.collection("countries").aggregate(pipeline).toArray(function (err, result) {
       if (err) throw err;
       // console.log(result)
       response.send(
@@ -95,18 +144,17 @@ app.get("/getSumByName/:name", async function (request, response) {
 });
 
 app.get("/getTodayData", async function (request, response) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function (err, db) {
     if (err) throw err;
-    var dbo = db.db("meta");
-    var today = new Date();
-    var start_date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+"T00:00:00.000Z";
-    var end_date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+"T23:59:59.999Z";
+    let dbo = db.db("meta");
+    let today = new Date();
+    let start_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + "T00:00:00.000Z";
+    let end_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + "T23:59:59.999Z";
     // console.log(start_date,end_date)
-    const pipeline ={"Datetime": {"$gte": new Date(start_date) , "$lt": new Date(end_date)}} 
-    dbo.collection("sumOfDay").find(pipeline).toArray(function(err, result) {
+    const pipeline = { "Datetime": { "$gte": new Date(start_date), "$lt": new Date(end_date) } }
+    dbo.collection("sumOfDay").find(pipeline).toArray(function (err, result) {
       if (err) throw err;
       // console.log(result)
-      
       response.send(
         result[0]
       );

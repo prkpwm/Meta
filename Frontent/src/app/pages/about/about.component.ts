@@ -18,9 +18,6 @@ export class aboutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(){
-    localStorage.setItem("title","About")
-  }
 
 
 }
