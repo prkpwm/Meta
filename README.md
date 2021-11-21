@@ -37,6 +37,14 @@ Database_name: meta
 -   Database collection: countries 
 -   Database collection: sumOfDay 
 ```
+## Docker
+```sh
+SERVER/Dockerfile
+  - docker build -t api-server .
+Frontent/Dockerfile 
+  - docker build -t angular .
+docker-compose up
+```
 
 ## Example
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(7).png)
