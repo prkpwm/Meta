@@ -15,7 +15,7 @@ MongoClient.connect(url, function (err, db) {
 
 app.use(cors());
 
- getLastDateInfo = async() => {
+getLastDateInfo = async () => {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     let dbo = db.db("meta");
@@ -31,34 +31,33 @@ app.use(cors());
   });
 }
 
-generateTodayDataOnStart = async() => {
+generateTodayDataOnStart = async () => {
   let today = new Date();
-  let formatDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + "T00:00:00.000Z";
+  let today_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() ) + "T00:00:00.000Z";
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     let dbo = db.db("meta");
-    let today = new Date();
-    let start_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T00:00:00.000Z";
-    let end_date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 1) + "T23:59:59.999Z";
-    const pipeline = { "Datetime": { "$gte": new Date(start_date), "$lt": new Date(end_date) } }
+    const pipeline = {}
     dbo.collection("sumOfDay").find(pipeline).toArray(function (err, result) {
       if (err) throw err;
       db.close();
-      console.log(result)
-      let v1 = result[0]['revenue']+Math.floor(Math.random() * (100000000 - 10000000 + 1) - (10000000)) 
-      let v2 = result[0]['profit']+Math.floor(Math.random() * (10000000 - 1000000 + 1) - (1000000))
-      let v3 = result[0]['member']+Math.floor(Math.random() * (1000000 - 100000 + 1) - (100000))
-      console.log(v1,v2,v3)
-      var myObj = { Datetime: new Date(), revenue: v1, profit: v2, member: v3 };
-      MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("meta");
-        dbo.collection("sumOfDay").insertOne(myObj, function (err, result) {
+      if(result[result.length - 1]['Datetime']!=today_date)
+      {
+        let v1 = result[result.length - 1]['revenue'] + Math.floor(Math.random() * (100000000 - 10000000 + 1) - (10000000))
+        let v2 = result[result.length - 1]['profit'] + Math.floor(Math.random() * (10000000 - 1000000 + 1) - (1000000))
+        let v3 = result[result.length - 1]['member'] + Math.floor(Math.random() * (1000000 - 100000 + 1) - (100000))
+        let v4 = result[result.length - 1]['order'] + Math.floor(Math.random() * (100000 - 10000 + 1) - (10000))
+        var myObj = { Datetime: new Date(today_date), revenue: v1, profit: v2, member: v3, order: v4 };
+        MongoClient.connect(url, function (err, db) {
           if (err) throw err;
-          console.log("1 document inserted")
-          db.close();
+          var dbo = db.db("meta");
+          dbo.collection("sumOfDay").insertOne(myObj, function (err, result) {
+            if (err) throw err;
+            console.log("1 document inserted")
+            db.close();
+          });
         });
-      });
+      }
     });
   });
 }

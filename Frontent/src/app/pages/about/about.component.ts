@@ -14,7 +14,7 @@ import {
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class aboutComponent implements OnInit {
+export class aboutComponent{
 
   constructor(private route: ActivatedRoute) {}
 

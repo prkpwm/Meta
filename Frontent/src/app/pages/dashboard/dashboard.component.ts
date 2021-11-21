@@ -188,9 +188,8 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
           });
           this.timeLine = getTimelineData;
           this.loadLineChart(false);
-
           this.loadPieChart();
-          this.loadData()
+          // this.loadData()
 
 
         });
@@ -198,6 +197,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   async loadData() {
+    console.log("55555555555555555555")
     let today = await this._http.get('http://localhost:5001/getTodayData').toPromise()
     this.Today_ORDER = await today['order']
     this.Total_ORDER = await this._http.get('http://localhost:5001/getSumByName/order').toPromise().then(res => { return res['summary'] })
@@ -208,6 +208,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     this.Today_MEMBERS = await today['member']
     this.Total_MEMBERS = await this._http.get('http://localhost:5001/getSumByName/member').toPromise().then(res => { return res['summary'] })
     this.finishedCases = this.Total_ORDER + this.Total_REVENUE + this.Total_PROFIT
+    console.log( )
     this.loadRadar();
   }
 

@@ -24,7 +24,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class contactComponent implements OnInit {
+export class contactComponent  {
 
 
   constructor(private route: ActivatedRoute, private _getDataService: GetdataService, private zone: NgZone, public translate : TranslateService) {}
