@@ -37,6 +37,11 @@ Database_name: meta
 -   Database collection: countries 
 -   Database collection: sumOfDay  ***Be careful change Datetime to date format***
 
+db.sumOfDay.find().forEach(function(doc) { 
+  doc.Datetime=new Date(doc.Datetime);
+  db.sumOfDay.save(doc); 
+})
+
 ```
 ## Docker
 ```sh
