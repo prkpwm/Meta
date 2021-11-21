@@ -32,10 +32,11 @@ node server.js
 ```
 
 ## Database MONGODB
-Meta  ##Database name
-- countries  ##Database collection
-- sumOfDay ##Database  collection
-
+```sh
+Database_name: Meta
+-   Database collection: countries 
+-   Database  collection: sumOfDay 
+```
 
 ## Author
 👤 **Pakpoom Srisen**
