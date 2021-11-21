@@ -40,7 +40,7 @@ Database_name: meta
 
 ## Example
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(7).png)
-![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(15))
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(15).png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(14).png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(17).png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(18).png)
