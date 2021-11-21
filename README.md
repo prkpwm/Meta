@@ -47,7 +47,7 @@ docker-compose up
 ```
 
 ## Example
-```sh
+
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(7).png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(15).png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(14).png)
@@ -58,7 +58,7 @@ docker-compose up
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(10)-2.png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(12)-1.png)
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(14)-1.png)
-```
+
 
 ## Author
 👤 **Pakpoom Srisen**
