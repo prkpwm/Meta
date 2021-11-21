@@ -38,7 +38,7 @@ Database_name: meta
 -   Database collection: sumOfDay  ***Be careful change Datetime to date format***
 
 db.sumOfDay.find().forEach(function(doc) { 
-  doc.Datetime=new Date(doc.Datetime);
+  doc.Datetime=new ISODate(doc.Datetime);
   db.sumOfDay.save(doc); 
 })
 
