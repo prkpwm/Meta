@@ -40,8 +40,15 @@ Database_name: meta
 
 ## Example
 ![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(7).png)
-
-
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(15))
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(14).png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(17).png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(18).png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(10)-1.png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(11)-1.png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(10)-2.png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(12)-1.png)
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(14)-1.png)
 ## Author
 👤 **Pakpoom Srisen**
 
