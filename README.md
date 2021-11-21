@@ -35,7 +35,8 @@ node server.js
 ```sh
 Database_name: meta
 -   Database collection: countries 
--   Database collection: sumOfDay 
+-   Database collection: sumOfDay  ***Becareful Datetime to date format***
+
 ```
 ## Docker
 ```sh
