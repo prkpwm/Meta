@@ -38,7 +38,8 @@ Database_name: meta
 -   Database collection: sumOfDay 
 ```
 
-
+## Example
+![alt text](https://raw.githubusercontent.com/prkpwm/Meta/main/Exam/Screenshot%20(7).png)
 
 
 ## Author
