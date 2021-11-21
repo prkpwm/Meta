@@ -1,0 +1,37 @@
+verison: "3"
+services:
+  web-angular:
+    image: angular
+    stdin_open: true
+    ports: 
+      - "4200:4200"
+    networks:
+      - mern-app
+    depend_on:
+      - api-server
+
+  api-server:
+    image:  api-server
+    ports:
+      - "5001:5001"
+    networks:
+      - mern-app
+    depend_on:
+      - db-mongo
+      
+  db-mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  mern-app:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

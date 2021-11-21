@@ -48,10 +48,10 @@ HttpClient
   styleUrls: ['./dashboard.component.scss'],
   animations: [
     trigger('fadeInOutAnimation', [
-      state('in', style({opacity: 1})),
+      state('in', style({ opacity: 1 })),
       transition(':enter', [
-        style({opacity: 0}),
-        animate(600 )
+        style({ opacity: 0 }),
+        animate(600)
       ])
     ])
   ]
@@ -100,21 +100,18 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
   public Today_MEMBERS
   public TimeLineData
   public countriesData
-  
+
   public sortType = "todayCases";
-  
+
   public countryCodes = COUNTRY_CODES;
-  
+
   public countries: any = [];
   constructor(private _http: HttpClient, private zone: NgZone, private _getDataService: GetdataService, public translate: TranslateService) {
   }
   async ngDoCheck() {
-    this.translate.get(['Shared.Other.14', 'Shared.Other.15', 'Shared.Other.16', 'Shared.Other.17', 'Shared.TopCards.1', 'Shared.TopCards.3', 'Shared.TopCards.4'])
-    .subscribe(translations => {
-        this.setTranslations(translations);
-        return 0;
-    });
+
   }
+
   calculateSum(index, array = this.countries) {
     var total = 0
     for (var i = 0, _len = array.length; i < _len; i++) {
@@ -153,64 +150,64 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       if (this.lineChart) {
         this.lineChart.dispose();
       }
-      if(this.radarChart){
+      if (this.radarChart) {
         this.radarChart.dispose();
       }
     });
   }
 
-  
+
   async ngOnInit() {
     this.loadData()
     await this.ngDoCheck();
     this.countries = await this._http.get('http://localhost:5001/getCountries').toPromise()
-    if(!localStorage.getItem("dontShow")){
+    if (!localStorage.getItem("dontShow")) {
       this.showModal();
     }
     this.zone.runOutsideAngular(async () => {
       combineLatest(
-        this._getDataService.getAll(this.sortType),
+        // this._getDataService.getAll(this.sortType),
         this._getDataService.getTimelineGlobal()
-  
-     )
-     .subscribe(([getAllData, getTimelineData]) => {
-       this.isLoading = false;
-      this.isLoadingCountries = false;
-      this.isLoadingMap = false;
-      // this.countries = getAllData;
-      // this.finishedCases = this.totalDeaths + this.totalRecoveries;
-      this.fuse = new Fuse(this.countries, {
-        shouldSort: true,
-        threshold: 0.6,
-        location: 0,
-        distance: 100,
-        minMatchCharLength: 1,
-        keys: [
-          "country"
-        ]
-      });
-      this.timeLine = getTimelineData;
-      this.loadLineChart(false);
-      this.loadRadar();
-      this.loadPieChart();
-      this.loadData()
 
-      
-     });
+      )
+        .subscribe(([getTimelineData]) => {
+          this.isLoading = false;
+          this.isLoadingCountries = false;
+          this.isLoadingMap = false;
+ 
+          this.fuse = new Fuse(this.countries, {
+            shouldSort: true,
+            threshold: 0.6,
+            location: 0,
+            distance: 100,
+            minMatchCharLength: 1,
+            keys: [
+              "country"
+            ]
+          });
+          this.timeLine = getTimelineData;
+          this.loadLineChart(false);
+
+          this.loadPieChart();
+          this.loadData()
+
+
+        });
     });
   }
 
-  async loadData(){
+  async loadData() {
     let today = await this._http.get('http://localhost:5001/getTodayData').toPromise()
     this.Today_ORDER = await today['order']
-    this.Total_ORDER = await this._http.get('http://localhost:5001/getSumByName/order').toPromise().then(res=>{return res['summary']})
+    this.Total_ORDER = await this._http.get('http://localhost:5001/getSumByName/order').toPromise().then(res => { return res['summary'] })
     this.Today_REVENUE = await today['revenue']
-    this.Total_REVENUE = await this._http.get('http://localhost:5001/getSumByName/revenue').toPromise().then(res=>{return res['summary']})
+    this.Total_REVENUE = await this._http.get('http://localhost:5001/getSumByName/revenue').toPromise().then(res => { return res['summary'] })
     this.Today_PROFIT = await today['profit']
-    this.Total_PROFIT = await this._http.get('http://localhost:5001/getSumByName/profit').toPromise().then(res=>{return res['summary']})
+    this.Total_PROFIT = await this._http.get('http://localhost:5001/getSumByName/profit').toPromise().then(res => { return res['summary'] })
     this.Today_MEMBERS = await today['member']
-    this.Total_MEMBERS = await this._http.get('http://localhost:5001/getSumByName/member').toPromise().then(res=>{return res['summary']})
-    this.finishedCases = this.Total_ORDER+this.Total_REVENUE+this.Total_PROFIT
+    this.Total_MEMBERS = await this._http.get('http://localhost:5001/getSumByName/member').toPromise().then(res => { return res['summary'] })
+    this.finishedCases = this.Total_ORDER + this.Total_REVENUE + this.Total_PROFIT
+    this.loadRadar();
   }
 
   searchCountries(key) {
@@ -222,14 +219,14 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     }
     this.countries = this.fuse.list;
   }
-  
+
   sortCountries(key, skey) {
     this.isLoadingCountries = true;
     this.sortType = key;
     this.loadSorted();
   }
-  
-  loadSorted(){
+
+  loadSorted() {
     this._getDataService.getAll(this.sortType).subscribe((data: {}) => {
       this.countries = data;
       this.isLoadingCountries = false;
@@ -259,21 +256,21 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
     this.loadMap("order");
   }
-  
+
 
   async loadLineChart(chartType) {
     this.caseData = [];
     if (this.lineChart) {
       this.lineChart.dispose();
     }
-    this.TimeLineData =  await this._http.get('http://localhost:5001/getTimeLine').toPromise()
-    for(let i =0;i<this.TimeLineData.length;i++){
+    this.TimeLineData = await this._http.get('http://localhost:5001/getTimeLine').toPromise()
+    for (let i = 0; i < this.TimeLineData.length; i++) {
       this.caseData.push({
         date: new Date(this.TimeLineData[i]['Datetime']),
         Revenue: this.TimeLineData[i]['revenue'],
         Profit: this.TimeLineData[i]['profit'],
         Member: this.TimeLineData[i]['member'],
-        Order:this.TimeLineData[i]['order']
+        Order: this.TimeLineData[i]['order']
       });
     }
     // console.log(this.caseData)
@@ -288,7 +285,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     // Create axes
     let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 50;
-    
+
     let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.logarithmic = chartType;
     valueAxis.renderer.labels.template.fill = am4core.color("#adb5bd");
@@ -305,12 +302,12 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     chart.legend.labels.template.fill = am4core.color("#adb5bd");
 
     chart.cursor = new am4charts.XYCursor();
-    
+
     this.lineChart = chart;
   }
 
   async loadMap(option) {
-    this.isLoadingMap=true;
+    this.isLoadingMap = true;
     if (this.mapChart) {
       this.mapChart.dispose();
     }
@@ -321,18 +318,18 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       color = "#f9c851";
     } else if (option == "revenue") {
       color = "#ff5b5b";
-    }else if (option == "order") {
+    } else if (option == "order") {
       color = "#21AFDD";
     }
     let mapData = [];
     this.countriesData = this.countries
     // console.log(this.countriesData,option)
-    for(let i =0;i<this.countriesData.length;i++){
+    for (let i = 0; i < this.countriesData.length; i++) {
       mapData.push({
-          id: this.countryCodes[this.countriesData[i]['country']],
-          name: this.countriesData[i]['country'],
-          value: this.countriesData[i][option],
-          color: am4core.color(color)
+        id: this.countryCodes[this.countriesData[i]['country']],
+        name: this.countriesData[i]['country'],
+        value: this.countriesData[i][option],
+        color: am4core.color(color)
       });
     }
     // console.log(this.fuse.list)
@@ -352,7 +349,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     let chartMap = am4core.create("worldChart", am4maps.MapChart);
     // Set map definition
     chartMap.geodata = am4geodata_worldLow;
-    
+
     // Set projection
     chartMap.projection = new am4maps.projections.Miller();
 
@@ -363,20 +360,20 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     polygonSeries.nonScalingStroke = true;
     polygonSeries.strokeWidth = 0.5;
     polygonSeries.calculateVisualCenter = true;
-    
+
     let imageSeries = chartMap.series.push(new am4maps.MapImageSeries());
     imageSeries.data = mapData;
     imageSeries.dataFields.value = "value";
-    
+
     let imageTemplate = imageSeries.mapImages.template;
     imageTemplate.nonScaling = true
-    
+
     let circle = imageTemplate.createChild(am4core.Circle);
     circle.fillOpacity = 0.7;
     circle.propertyFields.fill = "color";
     circle.tooltipText = "{name}: [bold]{value}[/]";
 
-    chartMap.events.on("ready",()=>{
+    chartMap.events.on("ready", () => {
       this.isLoadingMap = false;
     })
 
@@ -387,7 +384,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       "max": 30,
       "dataField": "value"
     })
-    
+
     imageTemplate.adapter.add("latitude", function (latitude, target) {
       let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext["id"]);
       if (polygon) {
@@ -395,7 +392,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       }
       return latitude;
     })
-    
+
     imageTemplate.adapter.add("longitude", function (longitude, target) {
       let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext["id"]);
       if (polygon) {
@@ -411,28 +408,28 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     this.mapChart = chartMap;
   }
 
-  loadRadar() {
+  async loadRadar() {
 
     let chart = am4core.create("radarChart", am4charts.RadarChart);
-    let cal = (this.Total_REVENUE+this.Total_ORDER+this.Total_PROFIT+this.Total_MEMBERS)
-    // Add data
-    chart.data = [{
-      "category": "ORDER",
-      "value": 100,
-      "full": 100
-    }, {
-      "category": "REVENUE",
-      "value": 96,
-      "full": 100
-    }, {
-      "category": "PROFIT",
-      "value": 37,
-      "full": 100
-    }, {
-      "category": "MEMBERS",
-      "value": 12,
-      "full": 100
-    }];
+    let cal = parseInt(this.Total_REVENUE) + parseInt(this.Total_ORDER) + parseInt(this.Total_PROFIT) + parseInt(this.Total_MEMBERS)
+    chart.data = [ {
+        "category": "ORDER",
+        "value": (this.Total_ORDER / cal) * 100,
+        "full": 100
+      }, {
+        "category": "MEMBERS",
+        "value": (this.Total_MEMBERS / cal) * 100,
+        "full": 100
+      },{
+        "category": "PROFIT",
+        "value": (this.Total_PROFIT / cal) * 100,
+        "full": 100
+      }, 
+        {
+          "category": "REVENUE",
+          "value": (this.Total_REVENUE / cal) * 100,
+          "full": 100
+        }];
 
     // console.log(chart.data)
 
@@ -443,7 +440,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
 
     // Set number format
     chart.numberFormatter.numberFormat = "#.#'%'";
-    
+
     // Create axes
     let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis<am4charts.AxisRendererRadial>());
     categoryAxis.dataFields.category = "category";
@@ -451,13 +448,13 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     categoryAxis.renderer.grid.template.strokeOpacity = 0;
     categoryAxis.renderer.labels.template.horizontalCenter = "right";
     categoryAxis.renderer.labels.template.adapter.add("fill", function (fill, target) {
-      if(target.dataItem.index==0){
+      if (target.dataItem.index == 0) {
         return am4core.color("#f9c851");
       }
-      if(target.dataItem.index==1){
+      if (target.dataItem.index == 1) {
         return am4core.color("#ff5b5b");
       }
-      if(target.dataItem.index==2){
+      if (target.dataItem.index == 2) {
         return am4core.color("#10c469");
       }
       return am4core.color("#21AFDD");
@@ -469,7 +466,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     valueAxis.min = 0;
     valueAxis.max = 100;
     valueAxis.strictMinMax = true;
-    
+
     valueAxis.renderer.labels.template.fill = am4core.color("#adb5bd");
 
     // Create series
@@ -490,26 +487,26 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     series2.columns.template.strokeWidth = 0;
     series2.columns.template.tooltipText = "{category}: [bold]{value}[/]";
     series2.columns.template.radarColumn.cornerRadius = 20;
-    
+
     series2.columns.template.adapter.add("fill", function (fill, target) {
       //return chart.colors.getIndex(target.dataItem.index);
-      if(target.dataItem.index==0){
+      if (target.dataItem.index == 0) {
         return am4core.color("#f9c851");
       }
-      if(target.dataItem.index==1){
+      if (target.dataItem.index == 1) {
         return am4core.color("#ff5b5b");
       }
-      if(target.dataItem.index==2){
+      if (target.dataItem.index == 2) {
         return am4core.color("#10c469");
       }
       return am4core.color("#21AFDD");
     });
-    
+
     // Add cursor
     chart.cursor = new am4charts.RadarCursor();
     chart.cursor.fill = am4core.color("#282e38");
     chart.tooltip.label.fill = am4core.color("#282e38");
-    
+
     this.radarChart = chart;
   }
 
@@ -533,32 +530,26 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     series.tooltip.label.fill = am4core.color("#282e38");
     return chart
   }
-      showModal(): void {
-        this.modalStep = 1;
-        this.isModalShown = true;
-      }
-     
-      hideModal(): void {
-        this.autoShownModal.hide();
-      }
-     
-      onHidden(): void {
-        this.isModalShown = false;
-      }
-      nextStep(){
-        this.modalStep+=1;
-      }
-      close(dontShow){
-        if(dontShow){
-          localStorage.setItem("dontShow","true");
-        }
-        this.hideModal();
-      }
-  async setTranslations(translations){
-    this.translations.active = translations['Shared.Other.14'];
-    this.translations.recovered = translations['Shared.Other.15'];
-    this.translations.deaths = translations['Shared.Other.16'];
-    this.translations.critical = translations['Shared.Other.17'];
-    this.translations.cases = translations['Shared.Other.14'];
+  showModal(): void {
+    this.modalStep = 1;
+    this.isModalShown = true;
   }
+
+  hideModal(): void {
+    this.autoShownModal.hide();
+  }
+
+  onHidden(): void {
+    this.isModalShown = false;
+  }
+  nextStep() {
+    this.modalStep += 1;
+  }
+  close(dontShow) {
+    if (dontShow) {
+      localStorage.setItem("dontShow", "true");
+    }
+    this.hideModal();
+  }
+
 }

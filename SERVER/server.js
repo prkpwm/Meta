@@ -4,8 +4,9 @@ var axios = require("axios");
 var cors = require('cors');
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
-
+let src = "localhost"
+var url = `mongodb://${src}:27017/`;
+console.log(url)
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   console.log("Database created!");
@@ -82,7 +83,7 @@ app.get("/getSumByName/:name", async function (request, response) {
     const pipeline = [
       { $group: { "_id": 1, "summary": {$sum: namimg} } }
     ];
-    dbo.collection("sumOfDay").aggregate(pipeline).toArray(function(err, result) {
+    dbo.collection("countries").aggregate(pipeline).toArray(function(err, result) {
       if (err) throw err;
       // console.log(result)
       response.send(

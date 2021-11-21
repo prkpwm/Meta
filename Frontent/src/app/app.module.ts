@@ -17,7 +17,6 @@ import { TopbarComponent } from './layouts/topbar/topbar.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { CountryComponent } from './pages/country/country.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -37,7 +36,7 @@ export function HttpLoaderFactory(http: HttpClient){
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,TopbarComponent, NavbarComponent, FooterComponent, DashboardComponent, CountryComponent, NotFoundComponent, CountupComponent, contactComponent, aboutComponent
+    LayoutComponent,TopbarComponent, NavbarComponent, FooterComponent, DashboardComponent, NotFoundComponent, CountupComponent, contactComponent, aboutComponent
   ],
   imports: [
     BrowserModule,
